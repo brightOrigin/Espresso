@@ -5,6 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class AFHTTPSessionManager;
 
-@interface BOAPIClient : NSObject
+
+@interface BOAPIClient : AFHTTPSessionManager
+
++ (instancetype) sharedClient;
+
 @end
