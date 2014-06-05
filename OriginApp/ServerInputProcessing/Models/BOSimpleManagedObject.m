@@ -13,8 +13,8 @@
 - (void) buildEntityAttributeToServerNameMapping
 {
     [super buildEntityAttributeToServerNameMapping];
-    [self.entityAttributeToServerNameMapping setValue:@"last_updated" forKey:@"modifiedDate"];
-    [self.entityAttributeToServerNameMapping setValue:@"name" forKey:@"name"];
+    [self.serverNameToEntityAttributeMapping setValue:@"last_updated" forKey:@"modifiedDate"];
+    [self.serverNameToEntityAttributeMapping setValue:@"name" forKey:@"name"];
 }
 
 

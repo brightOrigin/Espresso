@@ -9,11 +9,11 @@ static NSString *const kEntityAttributeToServerNameSelf = @"___SELF___";
 
 @interface BOManagedObject : NSManagedObject
 {
-    NSMutableDictionary *entityAttributeToServerNameMapping;
+    NSMutableDictionary *serverNameToEntityAttributeMapping;
 }
 
 
-@property (nonatomic, retain) NSMutableDictionary *entityAttributeToServerNameMapping;
+@property (nonatomic, retain) NSMutableDictionary *serverNameToEntityAttributeMapping;
 
 + (NSString *) entityName;
 

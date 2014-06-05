@@ -20,11 +20,11 @@
 {
     [super buildEntityAttributeToServerNameMapping];
 
-    [self.entityAttributeToServerNameMapping setValue:@"name" forKey:@"name"];
-    [self.entityAttributeToServerNameMapping setValue:@"location.address" forKey:@"address"];
-    [self.entityAttributeToServerNameMapping setValue:@"url" forKey:@"url"];
-    [self.entityAttributeToServerNameMapping setValue:@"verified" forKey:@"verified"];
-    [self.entityAttributeToServerNameMapping setValue:@"location.distance" forKey:@"distance"];
+    [self.serverNameToEntityAttributeMapping setValue:@"name" forKey:@"name"];
+    [self.serverNameToEntityAttributeMapping setValue:@"location.address" forKey:@"address"];
+    [self.serverNameToEntityAttributeMapping setValue:@"url" forKey:@"url"];
+    [self.serverNameToEntityAttributeMapping setValue:@"verified" forKey:@"verified"];
+    [self.serverNameToEntityAttributeMapping setValue:@"location.distance" forKey:@"distance"];
 }
 
 + (void) searchVenuesForTerm:(NSString *)searchTerm

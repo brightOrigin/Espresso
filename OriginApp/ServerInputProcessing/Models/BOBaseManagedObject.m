@@ -40,7 +40,7 @@
 {
     [super buildEntityAttributeToServerNameMapping];
 
-    [self.entityAttributeToServerNameMapping setValue:@"id" forKey:@"id"];
+    [self.serverNameToEntityAttributeMapping setValue:@"id" forKey:@"id"];
 }
 
 - (id) getValueForKeyAttributeWithName:(NSString *)keyAttributeName value:(id)value

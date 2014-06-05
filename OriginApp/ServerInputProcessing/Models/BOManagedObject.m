@@ -10,7 +10,7 @@
 
 @implementation BOManagedObject
 
-@synthesize entityAttributeToServerNameMapping;
+@synthesize serverNameToEntityAttributeMapping;
 
 #pragma mark -
 #pragma mark Convenience methods
@@ -352,7 +352,7 @@
 
     for (NSString *currentAttributeName in attributes)
     {
-        NSString *serverName = [self.entityAttributeToServerNameMapping valueForKey:currentAttributeName];
+        NSString *serverName = [self.serverNameToEntityAttributeMapping valueForKey:currentAttributeName];
 
         if (!serverName)
         {
@@ -967,17 +967,17 @@
 
 - (void) buildEntityAttributeToServerNameMapping
 {
-    entityAttributeToServerNameMapping = [[NSMutableDictionary alloc] init];
+    serverNameToEntityAttributeMapping = [[NSMutableDictionary alloc] init];
 }
 
-- (NSMutableDictionary *) entityAttributeToServerNameMapping
+- (NSMutableDictionary *) serverNameToEntityAttributeMapping
 {
-    if (!entityAttributeToServerNameMapping)
+    if (!serverNameToEntityAttributeMapping)
     {
         [self buildEntityAttributeToServerNameMapping];
     }
 
-    return entityAttributeToServerNameMapping;
+    return serverNameToEntityAttributeMapping;
 }
 
 @end
