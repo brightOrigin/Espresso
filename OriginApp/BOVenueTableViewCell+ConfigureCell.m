@@ -8,8 +8,10 @@
 
 @implementation BOVenueTableViewCell (ConfigureCell)
 
-- (void) configureCell:(Event *)event
+- (void) configureCell:(Venue *)venue
 {
+    self.venueNameLbl.text = venue.name;
+    self.venueAddressLbl.text = venue.address;
 }
 
 @end

@@ -5,6 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString *const kVenueTableCellIdentifier = @"VenueTableViewCell";
 
 @interface BOVenueTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) UILabel *venueNameLbl;
+@property (nonatomic, strong) UILabel *venueAddressLbl;
+
 @end

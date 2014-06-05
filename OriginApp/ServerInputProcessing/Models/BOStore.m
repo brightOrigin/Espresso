@@ -6,10 +6,10 @@
 #import "BOStore.h"
 #import "BOUtilityMethods.h"
 
-#define kCoreDataName                   @"CoreDataWrapper"
-#define kCoreDataFile                   @"CoreDataWrapper.sqlite"
-#define kCoreDataSHMFile                @"CoreDataWrapper.sqlite-shm"
-#define kCoreDataWALFile                @"CoreDataWrapper.sqlite-wal"
+#define kCoreDataName                   @"OriginApp"
+#define kCoreDataFile                   @"OriginApp.sqlite"
+#define kCoreDataSHMFile                @"OriginApp.sqlite-shm"
+#define kCoreDataWALFile                @"OriginApp.sqlite-wal"
 
 @interface BOStore ()
 

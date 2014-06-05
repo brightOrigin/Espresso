@@ -11,12 +11,13 @@
 @interface Venue : BOBaseManagedObject
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *address;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSNumber *verified;
+@property (nonatomic, strong) NSNumber *distance;
 
 + (void) searchVenuesForTerm:(NSString *)searchTerm
                     latitude:(NSNumber *)latitude
-                   longitude:(NSNumber *)longitude
-                  categoryID:(NSNumber *)categoryID;
+                   longitude:(NSNumber *)longitude;
 
 @end

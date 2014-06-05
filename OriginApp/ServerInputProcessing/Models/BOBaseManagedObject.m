@@ -19,7 +19,7 @@
     BOCDImportOperation *importOp = [[BOCDImportOperation alloc] initWithImportDataDictionary:importDataDictionary];
     [importOp setCompletionBlock:^
     {
-        DLog(@"gallery import done");
+        DLog(@"data import done");
     }];
 
     [[BOStore sharedInstance] addOperationToBackgroundCoreDataQueue:importOp];
@@ -30,7 +30,7 @@
     BOCDImportOperation *importOp = [[BOCDImportOperation alloc] initWithImportDataArray:importDataArray];
     [importOp setCompletionBlock:^
     {
-        DLog(@"gallery import done");
+        DLog(@"data import done");
     }];
 
     [[BOStore sharedInstance] addOperationToBackgroundCoreDataQueue:importOp];
@@ -45,14 +45,16 @@
 
 - (id) getValueForKeyAttributeWithName:(NSString *)keyAttributeName value:(id)value
 {
-    if ([value isKindOfClass:[NSString class]])
-    {
-        return [NSNumber numberWithInteger:[value integerValue]];
-    }
-    else
-    {
-        return value;
-    }
+//    if ([value isKindOfClass:[NSString class]])
+//    {
+//        return [NSNumber numberWithInteger:[value integerValue]];
+//    }
+//    else
+//    {
+//        return value;
+//    }
+
+    return value;
 }
 
 #pragma mark -
@@ -76,7 +78,8 @@
     NSMutableArray *returnArray = [[NSMutableArray alloc] initWithCapacity:[resultsArray count]];
     for (NSDictionary *currentResult in resultsArray)
     {
-        [returnArray addObject:[NSNumber numberWithInt:[[currentResult safeNullValueForKey:attributeName] intValue]]];
+//        [returnArray addObject:[NSNumber numberWithInt:[[currentResult safeNullValueForKey:attributeName] intValue]]];
+        [returnArray addObject:[currentResult safeNullValueForKey:attributeName]];
     }
 
     return returnArray;

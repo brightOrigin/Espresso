@@ -69,7 +69,9 @@
     }
 }
 
-+ (NSArray *) getArrayForAttribute:(NSString *)attributeName fromResults:(NSArray *)resultsArray
++ (NSArray *) getArrayForAttribute:(NSString *)attributeName
+                       fromResults:(NSArray *)resultsArray
+                         inContext:(NSManagedObjectContext *)context
 {
     if (!resultsArray || !attributeName)
     {
@@ -77,10 +79,26 @@
     }
 
     NSMutableArray *returnArray = [[NSMutableArray alloc] initWithCapacity:[resultsArray count]];
-    for (NSDictionary *currentResult in resultsArray)
+
+    NSAttributeType attributeType = [self typeForAttributeWithName:attributeName
+                                                         inContext:context];
+
+    if (attributeType == NSStringAttributeType)
     {
-//        [returnArray addObject:[NSNumber numberWithInt:[[currentResult safeNullValueForKey:attributeName] intValue]]];
-        [returnArray addObject:[currentResult safeNullValueForKey:attributeName]];
+        for (NSDictionary *currentResult in resultsArray)
+        {
+            [returnArray addObject:[currentResult safeNullValueForKey:attributeName]];
+        }
+    }
+    else if (attributeType == NSInteger16AttributeType ||
+            attributeType == NSInteger32AttributeType ||
+            attributeType == NSInteger64AttributeType)
+    {
+        for (NSDictionary *currentResult in resultsArray)
+        {
+            [returnArray addObject:[NSNumber numberWithInt:[[currentResult safeNullValueForKey:attributeName]
+                         intValue]]];
+        }
     }
 
     return returnArray;
@@ -114,26 +132,16 @@
                        withKeyAttributeName:nil
                      serverKeyAttributeName:nil
                                   inContext:context];
-/*
-    NSMutableSet *newObjectSet = [[NSMutableSet alloc] initWithCapacity:[theObjects count]];
-
-    for (id currentObject in theObjects)
-    {
-        BOManagedObject *newObject = [[self class] insertNewObjectIntoContext:context];
-        [newObject updateObjectWithDictionary:currentObject];
-
-        [newObjectSet addObject:newObject];
-    }
-
-    return newObjectSet;
-*/
 }
 
-+ (NSArray *)getObjectsMatchingKeys:(NSArray *)objectKeys forAttribute:(NSString *)keyAttribute inContext:(NSManagedObjectContext *)context
++ (NSArray *) getObjectsMatchingKeys:(NSArray *)objectKeys
+                        forAttribute:(NSString *)keyAttribute
+                           inContext:(NSManagedObjectContext *)context
 {
     return [self fetchEntitiesInContext:context
-                                           withSortDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:keyAttribute ascending:YES]]
-                                                 withPredicate:[NSPredicate predicateWithFormat:@"(%K IN %@)", keyAttribute, objectKeys]];
+                    withSortDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc]
+                 initWithKey:keyAttribute ascending:YES]]
+                          withPredicate:[NSPredicate predicateWithFormat:@"(%K IN %@)", keyAttribute, objectKeys]];
 }
 
 + (NSSet *) processNewOrUpdatedObjects:(NSArray *)theObjects
@@ -152,16 +160,16 @@
 
     if (keyAttribute && ![keyAttribute isEqualToString:@""])
     {
-        theObjects = [theObjects sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:keyAttribute ascending:YES selector:@selector(localizedStandardCompare:)]]];
+//        theObjects = [theObjects sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:keyAttribute ascending:YES selector:@selector(localizedStandardCompare:)]]];
+        theObjects = [theObjects sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:keyAttribute ascending:YES selector:@selector(localizedCompare:)]]];
 
-        updatedObjectKeys = [self getArrayForAttribute:serverKeyAttribute fromResults:theObjects];
+        updatedObjectKeys = [self getArrayForAttribute:serverKeyAttribute
+                                           fromResults:theObjects
+                                             inContext:context];
+
         objectsMatchingKeys = [self getObjectsMatchingKeys:updatedObjectKeys
                                               forAttribute:keyAttribute
                                                  inContext:context];
-//        objectsMatchingKeys = [self fetchEntitiesInContext:context
-//                                       withSortDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc]
-//                                                                                                       initWithKey:keyAttribute ascending:YES]]
-//                                             withPredicate:[NSPredicate predicateWithFormat:@"(%K IN %@)", keyAttribute, updatedObjectKeys]];
     }
     else
     {
@@ -182,23 +190,37 @@
 
         BOManagedObject *newOrExistingObject;
 
-        // create new object if nil or id doesn't match
-        int updateKey = [[currentUpdatedObject safeNullValueForKey:serverKeyAttribute] intValue];
-        int existingKey = [[currentExistingObject valueForKey:keyAttribute] intValue];
 
-        if (!currentExistingObject || (updateKey != existingKey))
-        {
-            newOrExistingObject = [self insertNewObjectIntoContext:context];
-        }
-                // existing object
-        else
+        // create new object if nil or id doesn't match
+//        int updateKey = [[currentUpdatedObject safeNullValueForKey:serverKeyAttribute] intValue];
+//        int existingKey = [[currentExistingObject valueForKey:keyAttribute] intValue];
+//
+//        if (!currentExistingObject || (updateKey != existingKey))
+//        {
+//            newOrExistingObject = [self insertNewObjectIntoContext:context];
+//        }
+//                // existing object
+//        else
+//        {
+//            newOrExistingObject = currentExistingObject;
+//            existingIndex++;
+//        }
+
+        // create new object if nil or id doesn't match
+        if ([self doesUpdateKey:[currentUpdatedObject safeNullValueForKey:serverKeyAttribute]
+               matchExistingKey:[currentExistingObject valueForKey:keyAttribute]
+                  attributeType:[self typeForAttributeWithName:keyAttribute inContext:context]])
         {
             newOrExistingObject = currentExistingObject;
             existingIndex++;
         }
+        else
+        {
+            newOrExistingObject = [self insertNewObjectIntoContext:context];
+        }
+
 
         [newOrExistingObject updateWithDictionary:currentUpdatedObject];
-//        currentExistingObject = nil;
 
         [objectsSet addObject:newOrExistingObject];
     }
@@ -206,8 +228,39 @@
     return objectsSet;
 }
 
++ (BOOL) doesUpdateKey:(id)updateKey
+      matchExistingKey:(id)existingKey
+         attributeType:(NSAttributeType)attributeType
+{
+    if (!updateKey || !existingKey)
+    {
+        return false;
+    }
+
+    if (attributeType == NSStringAttributeType)
+    {
+        // TODO: should check to make sure updateKey & existingKey are the same type
+        if ([updateKey isEqualToString:existingKey])
+        {
+            return true;
+        }
+    }
+    else if (attributeType == NSInteger16AttributeType ||
+            attributeType == NSInteger32AttributeType ||
+            attributeType == NSInteger64AttributeType)
+    {
+        if (([updateKey intValue] == [existingKey intValue]))
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 + (void) processUpdatedObjects:(NSArray *)updatedObjects
-                       withKey:(NSString *)key inContext:(NSManagedObjectContext *)context
+                       withKey:(NSString *)key
+                     inContext:(NSManagedObjectContext *)context
 {
     if (!updatedObjects || [updatedObjects count] == 0)
     {
@@ -224,7 +277,7 @@
 //                                                                                                            initWithKey:key ascending:YES]]
 //                                                  withPredicate:[NSPredicate predicateWithFormat:@"(%K IN %@)", key, updatedObjects]];
 //
-    DLog(@"^^^^^^^ Updating following galleries %@", objectsMatchingKeys);
+    DLog(@"^^^^^^^ Updating following objects %@", objectsMatchingKeys);
 
     for (BOManagedObject *objectToUpdate in objectsMatchingKeys)
     {
@@ -275,6 +328,22 @@
     // optionally batch update objects in the bg?
 }
 
++ (NSAttributeType) typeForAttributeWithName:(NSString *)attributeName inContext:(NSManagedObjectContext *)context
+{
+
+    NSPropertyDescription *currentAttribute = [[[NSEntityDescription entityForName:[self entityName]
+                                                            inManagedObjectContext:context]
+                                                                     propertiesByName]
+                                                                     objectForKey:attributeName];
+
+    if ([currentAttribute isKindOfClass:[NSAttributeDescription class]])
+    {
+        return [((NSAttributeDescription *) currentAttribute) attributeType];
+    }
+
+    return NSUndefinedAttributeType;
+}
+
 - (void) updateWithDictionary:(NSDictionary *)data
 {
     NSDictionary *properties = [[self entity] propertiesByName];
@@ -287,7 +356,7 @@
 
         if (!serverName)
         {
-//            DLog(@"No server parameter found with name %@ in server object for %@ entity", currentAttributeName, [self class]);
+            DLog(@"No server parameter found with name %@ in server object for %@ entity", currentAttributeName, [self class]);
         }
         else
         {
@@ -319,7 +388,7 @@
                         {
                             [self updateAttribute:currentAttributeName
                                         withValue:[NSNumber numberWithInteger:[[data safeNullValueForKey:serverName]
-                                                                                     integerValue]]];
+                                  integerValue]]];
                         }
                     }
                     else
@@ -328,7 +397,7 @@
                         {
                             [self updateAttribute:currentAttributeName
                                         withValue:[NSNumber numberWithInteger:[[data safeNullValueForKey:serverName]
-                                                                                     integerValue]]];
+                                  integerValue]]];
                         }
                     }
                 }
@@ -341,7 +410,7 @@
                         {
                             [self updateAttribute:currentAttributeName
                                         withValue:[NSNumber numberWithFloat:[[data safeNullValueForKey:serverName]
-                                                                                    floatValue]]];
+                                  floatValue]]];
 
                         }
                     }
@@ -349,7 +418,7 @@
                     {
                         [self updateAttribute:currentAttributeName
                                     withValue:[NSNumber numberWithFloat:[[data safeNullValueForKey:serverName]
-                                                                                floatValue]]];
+                              floatValue]]];
 
                     }
                 }
@@ -362,7 +431,7 @@
                         {
                             [self updateAttribute:currentAttributeName
                                         withValue:[NSNumber numberWithDouble:[[data safeNullValueForKey:serverName]
-                                                                                    doubleValue]]];
+                                  doubleValue]]];
 
                         }
                     }
@@ -370,7 +439,7 @@
                     {
                         [self updateAttribute:currentAttributeName
                                     withValue:[NSNumber numberWithDouble:[[data safeNullValueForKey:serverName]
-                                                                                doubleValue]]];
+                              doubleValue]]];
 
                     }
                 }
@@ -440,7 +509,7 @@
 
                     }
                 }
-                        // to-one relationship
+                    // to-one relationship
                 else
                 {
                     if ([serverObject isKindOfClass:[NSDictionary class]])
@@ -449,7 +518,7 @@
                         {
                             [self updateRelationship:currentAttributeName
                                           withEntity:[[((NSRelationshipDescription *) currentAttribute) destinationEntity]
-                                                                                                        name]
+                                  name]
                                                 data:serverObject
                                              context:self.managedObjectContext];
                         }
@@ -462,7 +531,7 @@
                                                        inContext:self.managedObjectContext];
                         }
                     }
-                            // if the relationship is just an id then we just need to link the object to this object
+                        // if the relationship is just an id then we just need to link the object to this object
                     else if (([serverObject isKindOfClass:[NSString class]] && [((NSString *) serverObject) isNotBlank]) ||
                             ([serverObject isKindOfClass:[NSNumber class]] && [[data safeNullValueForKey:serverName]
                                                                                      integerValue] != 0))
@@ -471,16 +540,16 @@
                         // TODO: a different id name like user_id
                         [self updateRelationship:currentAttributeName
                                       withEntity:[[((NSRelationshipDescription *) currentAttribute) destinationEntity]
-                                                                                                    name]
+                              name]
                                           withID:[NSNumber numberWithInt:[[data safeNullValueForKey:serverName]
-                                                                                integerValue]]];
+                              integerValue]]];
                     }
-                            // this is a special case which allows a relationship entity to use the parents dictionary to update itself
+                        // this is a special case which allows a relationship entity to use the parents dictionary to update itself
                     else if ([serverName isNotBlank] && [serverName isEqualToString:kEntityAttributeToServerNameSelf])
                     {
                         [self updateRelationship:currentAttributeName
                                       withEntity:[[((NSRelationshipDescription *) currentAttribute) destinationEntity]
-                                                                                                    name]
+                              name]
                                             data:data
                                          context:self.managedObjectContext];
                     }
@@ -638,11 +707,13 @@
                                                                withPredicate:[NSPredicate predicateWithFormat:@"id = %@", entityID]]
                                                        firstObject];
 
-    if (theObject && (![self valueForKey:relationshipName] || [theObject.id integerValue] != [[[self valueForKey:relationshipName]
-                                                                            valueForKey:@"id"]
-                                                                            integerValue]))
+    if (theObject &&
+            (![self valueForKey:relationshipName] || [theObject.id isEqualToString:[[self valueForKey:relationshipName]
+                                                                   valueForKey:@"id"]]))
+//    if (theObject && (![self valueForKey:relationshipName] || [theObject.id integerValue] != [[[self valueForKey:relationshipName]
+//                                                                            valueForKey:@"id"]
+//                                                                            integerValue]))
     {
-//        [self setValue:theObject forKey:relationshipName];
         [self setToOneRelationshipWithObject:theObject
                             relationshipName:relationshipName
                                    inContext:self.managedObjectContext];
@@ -860,8 +931,8 @@
         else
         {
             NSAssert2([stringOrPredicate isKindOfClass:[NSPredicate class]],
-            @"Second parameter passed to %s is of unexpected class %@",
-            sel_getName(_cmd), NSStringFromClass(stringOrPredicate));
+                      @"Second parameter passed to %s is of unexpected class %@",
+                      sel_getName(_cmd), NSStringFromClass(stringOrPredicate));
             predicate = (NSPredicate *) stringOrPredicate;
         }
         [request setPredicate:predicate];

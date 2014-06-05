@@ -5,7 +5,7 @@
 
 #import "BOAPIClient.h"
 
-static NSString *const FourSquareAPIBaseURLString = @"http://api.foursquare.com/";
+static NSString *const FourSquareAPIBaseURLString = @"https://api.foursquare.com/v2/";
 
 @implementation BOAPIClient
 

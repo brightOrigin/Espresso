@@ -13,7 +13,7 @@
 {
     [super main];
 
-    NSArray *resultsArray = [self.operationDataDictionary objectForKey:@"venues"]];
+    NSArray *resultsArray = [self.operationDataDictionary objectForKey:@"venues"];
 
     [Venue processNewOrUpdatedObjects:resultsArray inContext:self.context];
 //    [Venue processUpdatedObjects:[self.operationDataDictionary objectForKey:@"updated"] inContext:self.context];
@@ -21,4 +21,5 @@
 
     [[BOStore sharedInstance] saveContext:self.context];
 }
+
 @end

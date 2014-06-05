@@ -5,9 +5,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BOVenueTableViewCell.h"
+#import "Venue.h"
 
 @interface BOVenueTableViewCell (ConfigureCell)
 
-- (void) configureCell:(Event *)event;
+- (void) configureCell:(Venue *)venue;
 
 @end

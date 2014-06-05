@@ -15,9 +15,25 @@
 
 @implementation FRCDataSource
 
-- (void) dealloc
+- (id) initWithTableView:(UITableView *)aTableView
+          cellIdentifier:(NSString *)aCellIdentifier
+      configureCellBlock:(CellConfigureBlock)aConfigureCellBlock
 {
-    DLog(@"Dealloc FRCDataSource");
+    self = [super init];
+    if (self)
+    {
+        self.tableView = aTableView;
+        self.tableView.dataSource = self;
+        self.reuseIdentifier = aCellIdentifier;
+        self.configureCellBlock = aConfigureCellBlock;
+
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(reloadTableData:)
+//                                                     name:kGalleryImportDidFinishNotification object:nil];
+
+        [self setup];
+    }
+    return self;
 }
 
 - (void) setup
@@ -40,27 +56,6 @@
     }
 
     [self reloadData];
-}
-
-- (id) initWithTableView:(UITableView *)aTableView
-          cellIdentifier:(NSString *)aCellIdentifier
-      configureCellBlock:(CellConfigureBlock)aConfigureCellBlock
-{
-    self = [super init];
-    if (self)
-    {
-        self.tableView = aTableView;
-        self.tableView.dataSource = self;
-        self.reuseIdentifier = aCellIdentifier;
-        self.configureCellBlock = aConfigureCellBlock;
-
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                 selector:@selector(reloadTableData:)
-//                                                     name:kGalleryImportDidFinishNotification object:nil];
-
-        [self setup];
-    }
-    return self;
 }
 
 - (void) reloadData

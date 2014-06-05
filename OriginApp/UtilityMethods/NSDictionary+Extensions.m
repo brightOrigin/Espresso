@@ -9,7 +9,7 @@
         return @"";
     }
 
-    return [self valueForKey:key];
+    return [self valueForKeyPath:key];
 }
 
 @end

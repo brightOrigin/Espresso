@@ -12,11 +12,10 @@
 		3669848613EFF4DD947353EF /* BOCDImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698CC13E83CE5841875989 /* BOCDImportOperation.m */; };
 		3669851782F13E5665158A84 /* BOVenueTableViewCell+ConfigureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698342622FD36E33B9BBCC /* BOVenueTableViewCell+ConfigureCell.m */; };
 		36698518CDACAF7961D6EDB0 /* VenueImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698823BEE92EEF9262F0E0 /* VenueImportOperation.m */; };
-		3669867D3BC305BBDC4736E5 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 366987EA89E833162C27481D /* Venue.m */; };
 		3669868C1FEB28CEA92E2CB8 /* BOSimpleManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698B29271EBAA978C721EA /* BOSimpleManagedObject.m */; };
+		366986B14B6D487855F553F6 /* BOVenueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 366989A8242A284122FFEE5D /* BOVenueTableViewController.m */; };
 		366986DF71F6E406EFAD2ED7 /* FRCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 366981BB6B0DC08C1BC73E7C /* FRCDataSource.m */; };
 		36698720BA7489E2BD021ADB /* NSFetchedResultsController+LoggedFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669894129EB1938A4977A5D /* NSFetchedResultsController+LoggedFetch.m */; };
-		3669873EAF93751106E0083A /* BORootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 366986C8C538FADD30D33FD8 /* BORootTableViewController.m */; };
 		3669884C267B5DD4D83B27D1 /* BOManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698AA4F210890B13037C00 /* BOManagedObject.m */; };
 		3669884DED9FDB1FC60DC855 /* BOBaseManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698105FDCBE2AA8A49A724 /* BOBaseManagedObject.m */; };
 		3669887279CE6B835EC99D73 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 366985BD9D5BB6F5749BACF5 /* NSString+Extensions.m */; };
@@ -25,6 +24,7 @@
 		36698B726AB14AE752D1ED08 /* BOUtilityMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 366982DBC55C5D4DA2CEC479 /* BOUtilityMethods.m */; };
 		36698C2D088F9B3D1DF6F593 /* FRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698D0AA169E6A4AA224BEB /* FRCViewController.m */; };
 		36698DE79B8FBE92EBBB0F5C /* BOStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669895830ABACAB0F10D616 /* BOStore.m */; };
+		36698F589ED8D396AA834A29 /* UILabel+(QuickCreate).m in Sources */ = {isa = PBXBuildFile; fileRef = 366988C23EF1FD908D19C55D /* UILabel+(QuickCreate).m */; };
 		77CD42E886BB408280202B57 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6577D2A4A4564C8287611401 /* libPods.a */; };
 		EA08CFC3193E9FF0007B733B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFC2193E9FF0007B733B /* Foundation.framework */; };
 		EA08CFC5193E9FF0007B733B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFC4193E9FF0007B733B /* CoreGraphics.framework */; };
@@ -69,17 +69,15 @@
 		3669843463C599680F414669 /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extensions.m"; sourceTree = "<group>"; };
 		366985BD9D5BB6F5749BACF5 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
 		366985C7E4CA3C0534794C92 /* NSFetchedResultsController+LoggedFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+LoggedFetch.h"; sourceTree = "<group>"; };
-		366986C8C538FADD30D33FD8 /* BORootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BORootTableViewController.m; sourceTree = "<group>"; };
 		3669871FB60EB7143747D1D7 /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extensions.h"; sourceTree = "<group>"; };
-		36698782D6C0A08D3CE376F5 /* BORootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BORootTableViewController.h; sourceTree = "<group>"; };
 		366987A5296887CEE9B22849 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
-		366987EA89E833162C27481D /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		36698823BEE92EEF9262F0E0 /* VenueImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueImportOperation.m; sourceTree = "<group>"; };
 		3669883410D89CA0A54F303A /* FRCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRCDataSource.h; sourceTree = "<group>"; };
+		366988C23EF1FD908D19C55D /* UILabel+(QuickCreate).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+(QuickCreate).m"; sourceTree = "<group>"; };
 		3669891B6A1DC545E9E6A210 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		3669894129EB1938A4977A5D /* NSFetchedResultsController+LoggedFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+LoggedFetch.m"; sourceTree = "<group>"; };
 		3669895830ABACAB0F10D616 /* BOStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOStore.m; sourceTree = "<group>"; };
-		366989E1DF0484A3F07B9743 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		366989A8242A284122FFEE5D /* BOVenueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOVenueTableViewController.m; sourceTree = "<group>"; };
 		36698A36791F2E2EACB79736 /* BOUtilityMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOUtilityMethods.h; sourceTree = "<group>"; };
 		36698AA4F210890B13037C00 /* BOManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOManagedObject.m; sourceTree = "<group>"; };
 		36698AECB11D18C929FB9D29 /* VenueImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueImportOperation.h; sourceTree = "<group>"; };
@@ -88,8 +86,10 @@
 		36698CC13E83CE5841875989 /* BOCDImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOCDImportOperation.m; sourceTree = "<group>"; };
 		36698D0072CB30718EC99F5E /* BOVenueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOVenueTableViewCell.m; sourceTree = "<group>"; };
 		36698D0AA169E6A4AA224BEB /* FRCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRCViewController.m; sourceTree = "<group>"; };
+		36698D7B1BC882E5A28B77FE /* BOVenueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOVenueTableViewController.h; sourceTree = "<group>"; };
 		36698D9EB5A2446BBD834997 /* BOManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOManagedObject.h; sourceTree = "<group>"; };
 		36698E36E897565965CAD357 /* FRCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRCViewController.h; sourceTree = "<group>"; };
+		36698E5DA43D190C27F59B38 /* UILabel+(QuickCreate).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+(QuickCreate).h"; sourceTree = "<group>"; };
 		36698F0E1A841010A57BD285 /* BOAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOAPIClient.h; sourceTree = "<group>"; };
 		6577D2A4A4564C8287611401 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08CFBF193E9FF0007B733B /* OriginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OriginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,15 +154,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3669869A836C796B3003A67B /* CoreData Models */ = {
-			isa = PBXGroup;
-			children = (
-				366989E1DF0484A3F07B9743 /* Venue.h */,
-				366987EA89E833162C27481D /* Venue.m */,
-			);
-			path = "CoreData Models";
-			sourceTree = "<group>";
-		};
 		366988BB25F396752FB2DD7D /* UtilityMethods */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +165,8 @@
 				3669843463C599680F414669 /* NSDictionary+Extensions.m */,
 				366985C7E4CA3C0534794C92 /* NSFetchedResultsController+LoggedFetch.h */,
 				3669894129EB1938A4977A5D /* NSFetchedResultsController+LoggedFetch.m */,
+				36698E5DA43D190C27F59B38 /* UILabel+(QuickCreate).h */,
+				366988C23EF1FD908D19C55D /* UILabel+(QuickCreate).m */,
 			);
 			path = UtilityMethods;
 			sourceTree = "<group>";
@@ -186,8 +179,6 @@
 				366981BB6B0DC08C1BC73E7C /* FRCDataSource.m */,
 				36698E36E897565965CAD357 /* FRCViewController.h */,
 				36698D0AA169E6A4AA224BEB /* FRCViewController.m */,
-				36698782D6C0A08D3CE376F5 /* BORootTableViewController.h */,
-				366986C8C538FADD30D33FD8 /* BORootTableViewController.m */,
 			);
 			path = ServerInputProcessing;
 			sourceTree = "<group>";
@@ -241,13 +232,14 @@
 				36698D0072CB30718EC99F5E /* BOVenueTableViewCell.m */,
 				366983092ACF9F9EFE823E9A /* BOVenueTableViewCell+ConfigureCell.h */,
 				36698342622FD36E33B9BBCC /* BOVenueTableViewCell+ConfigureCell.m */,
-				3669869A836C796B3003A67B /* CoreData Models */,
 				3669891B6A1DC545E9E6A210 /* Venue.h */,
 				366987A5296887CEE9B22849 /* Venue.m */,
 				36698B26276190E1B94D20A9 /* ServerInputProcessing */,
 				366988BB25F396752FB2DD7D /* UtilityMethods */,
 				36698AECB11D18C929FB9D29 /* VenueImportOperation.h */,
 				36698823BEE92EEF9262F0E0 /* VenueImportOperation.m */,
+				366989A8242A284122FFEE5D /* BOVenueTableViewController.m */,
+				36698D7B1BC882E5A28B77FE /* BOVenueTableViewController.h */,
 			);
 			path = OriginApp;
 			sourceTree = "<group>";
@@ -421,7 +413,6 @@
 				3669848613EFF4DD947353EF /* BOCDImportOperation.m in Sources */,
 				3669811D0B85BCE9CFA4EF0C /* BOVenueTableViewCell.m in Sources */,
 				3669851782F13E5665158A84 /* BOVenueTableViewCell+ConfigureCell.m in Sources */,
-				3669867D3BC305BBDC4736E5 /* Venue.m in Sources */,
 				36698A0B890FDFD887388D17 /* Venue.m in Sources */,
 				36698DE79B8FBE92EBBB0F5C /* BOStore.m in Sources */,
 				3669884C267B5DD4D83B27D1 /* BOManagedObject.m in Sources */,
@@ -429,12 +420,13 @@
 				3669868C1FEB28CEA92E2CB8 /* BOSimpleManagedObject.m in Sources */,
 				366986DF71F6E406EFAD2ED7 /* FRCDataSource.m in Sources */,
 				36698C2D088F9B3D1DF6F593 /* FRCViewController.m in Sources */,
-				3669873EAF93751106E0083A /* BORootTableViewController.m in Sources */,
 				36698B726AB14AE752D1ED08 /* BOUtilityMethods.m in Sources */,
 				3669887279CE6B835EC99D73 /* NSString+Extensions.m in Sources */,
 				36698A0BC65C74696F7E1108 /* NSDictionary+Extensions.m in Sources */,
 				36698720BA7489E2BD021ADB /* NSFetchedResultsController+LoggedFetch.m in Sources */,
 				36698518CDACAF7961D6EDB0 /* VenueImportOperation.m in Sources */,
+				366986B14B6D487855F553F6 /* BOVenueTableViewController.m in Sources */,
+				36698F589ED8D396AA834A29 /* UILabel+(QuickCreate).m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

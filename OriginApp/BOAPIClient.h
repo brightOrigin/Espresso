@@ -4,9 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFHTTPSessionManager.h"
 
-@class AFHTTPSessionManager;
-
+static NSString *const kAPIRequestDidFailNotification = @"APIRequestDidFailNotification";
 
 @interface BOAPIClient : AFHTTPSessionManager
 

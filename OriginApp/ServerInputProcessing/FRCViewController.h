@@ -13,18 +13,11 @@
 - (NSString *) sectionKeyNamePathForFRCViewController:(FRCViewController *)frcViewController;
 - (NSString *) cacheNameForFRCViewController:(FRCViewController *)frcViewController;
 
-- (void) frcViewController:(FRCViewController *)frcViewController
-getObjectsFromServerForPageCount:(NSInteger)pageCount
-                         pageNum:(NSInteger)pageNum;
-
-
-- (BOOL) moreServerObjectsAvailableForFRCViewController:(FRCViewController *)frcViewController;
-
-- (void) frcViewController:(FRCViewController *)frcViewController
-           didSelectObject:(id)selectedObject
-                   atIndex:(NSInteger)index;
-
 @optional
+
+- (void) frcViewController:(FRCViewController *)frcViewController getObjectsFromServerForPageCount:(NSInteger)pageCount pageNum:(NSInteger)pageNum;
+- (BOOL) moreServerObjectsAvailableForFRCViewController:(FRCViewController *)frcViewController;
+- (void) frcViewController:(FRCViewController *)frcViewController didSelectObject:(id)selectedObject atIndex:(NSInteger)index;
 - (void) frcViewController:(FRCViewController *)frcViewController didSetFRCDataSourceWithObjects:(NSArray *)fetchedObjects;
 - (void) frcViewControllerShouldRefreshObjectsFromServer:(FRCViewController *)frcViewController;
 
@@ -58,6 +51,6 @@ static NSString *const kTableCellIdentifier = @"TableViewCell";
 - (NSString *) cellReuseIdentifier;
 - (CellConfigureBlock) blockToConfigureTableCell;
 
-- (void) startServerRefresh:(NSNotification *)notification;
+//- (void) startServerRefresh:(NSNotification *)notification;
 
 @end

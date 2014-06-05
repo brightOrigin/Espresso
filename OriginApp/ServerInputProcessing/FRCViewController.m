@@ -8,6 +8,8 @@
 #import "BOUtilityMethods.h"
 #import "BOVenueTableViewCell.h"
 #import "BOVenueTableViewCell+ConfigureCell.h"
+#import "Venue.h"
+#import "BOAPIClient.h"
 
 @interface FRCViewController ()
 
@@ -59,25 +61,14 @@
 {
     [super viewDidLoad];
 
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(reloadData)
-//                                                 name:kServerRequestDidFailNotification
-//                                               object:nil];
-//
-//
-//    [[NSNotificationCenter defaultCenter] addObserver:self
-//                                             selector:@selector(updateNoResultsView)
-//                                                 name:NSManagedObjectContextDidSaveNotification
-//                                               object:nil];
-//
-//    self.pageNum = 1;
-//    self.pageCount = 25;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reloadData)
+                                                 name:kAPIRequestDidFailNotification
+                                               object:nil];
 
     [self setupView];
     [self setupDataSource];
     [self setFRC];
-//    [self setupPaginationView];
-//    [self setupNoResultsView];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -106,30 +97,12 @@
     self.tableView.contentInset = UIEdgeInsetsMake(44 + 20, 0.0, 0.0, 0.0);
 
     [self.view addSubview:self.tableView];
-
-//    self.pullToRefreshView = [[SSPullToRefreshView alloc] initWithScrollView:self.tableView
-//                                                                    delegate:self];
-//    self.pullToRefreshView.contentView = [[PullToRefreshContentView alloc] initWithFrame:CGRectZero];
 }
 
 
 - (void) setupDataSource
 {
     self.frcDataSource = [self dataSourceForController];
-}
-
-
-- (NSString *) cellReuseIdentifier
-{
-    return kTableCellIdentifier;
-}
-
-- (CellConfigureBlock) blockToConfigureTableCell
-{
-    return ^(BOVenueTableViewCell *cell, Event *event)
-    {
-        [cell configureCell:event];
-    };
 }
 
 - (void) setFRC
@@ -142,8 +115,6 @@
 
     [self.frcDataSource setFRC:frc];
 
-//    [self updateNoResultsView];
-
     if ([self.frcViewControllerDelegate respondsToSelector:@selector(frcViewController:didSetFRCDataSourceWithObjects:)])
     {
         return [self.frcViewControllerDelegate frcViewController:self
@@ -155,7 +126,7 @@
 - (UITableView *) tableViewForController
 {
     return [[UITableView alloc] initWithFrame:self.view.bounds
-                                        style:UITableViewStyleGrouped];
+                                        style:UITableViewStylePlain];
 }
 
 - (Class) getTableViewCellClass
@@ -163,6 +134,18 @@
     return [UITableViewCell class];
 }
 
+- (NSString *) cellReuseIdentifier
+{
+    return kVenueTableCellIdentifier;
+}
+
+- (CellConfigureBlock) blockToConfigureTableCell
+{
+    return ^(BOVenueTableViewCell *cell, Venue *venue)
+    {
+        [cell configureCell:venue];
+    };
+}
 
 - (FRCDataSource *) dataSourceForController
 {
@@ -188,6 +171,13 @@
 }
 
 
+- (void) reloadData
+{
+    [self setFRC];
+}
+
+
+/*
 - (void) startServerRefresh:(NSNotification *)notification
 {
     // reset the pagination flags
@@ -203,12 +193,6 @@
 {
     [self.frcDataSource changePredicate:predicate ? predicate : self.fetchRequest.predicate];
 }
-
-- (void) reloadData
-{
-    [self setFRC];
-}
-
 
 #pragma mark -
 #pragma mark UIScrollViewDelegate Methods
@@ -230,6 +214,6 @@
     }
 
 }
-
+*/
 
 @end

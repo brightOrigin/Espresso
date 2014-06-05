@@ -4,12 +4,12 @@
 //
 
 #import "BOManagedObject.h"
-#import "ServerManagerDelegate.h"
 #import "BOStore.h"
 
-@interface BOBaseManagedObject : BOManagedObject <ServerManagerDelegate>
+@interface BOBaseManagedObject : BOManagedObject
 
-@property (nonatomic, retain) NSNumber * id;
+//@property (nonatomic, retain) NSNumber * id;
+@property (nonatomic, copy) NSString * id;
 
 + (void) importObjects:(NSDictionary *)importDataDictionary;
 + (void) importObjectsWithArray:(NSArray *)importDataArray;

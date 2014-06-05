@@ -15,3 +15,12 @@
     #import <Foundation/Foundation.h>
     #import <CoreData/CoreData.h>
 #endif
+
+#ifdef DEBUG
+#define DLog( s, ... ) NSLog( @"%s[%d]    %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define DLog( s, ... )
+#endif
+
+// ALog always displays output regardless of the DEBUG setting
+#define ALog( s, ... ) NSLog( @"%s[%d]    %@", __PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )

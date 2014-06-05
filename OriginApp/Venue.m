@@ -5,16 +5,26 @@
 
 #import "Venue.h"
 #import "VenueImportOperation.h"
+#import "BOAPIClient.h"
 
 
 @implementation Venue
+
+@dynamic name;
+@dynamic address;
+@dynamic url;
+@dynamic verified;
+@dynamic distance;
 
 - (void) buildEntityAttributeToServerNameMapping
 {
     [super buildEntityAttributeToServerNameMapping];
 
     [self.entityAttributeToServerNameMapping setValue:@"name" forKey:@"name"];
+    [self.entityAttributeToServerNameMapping setValue:@"location.address" forKey:@"address"];
     [self.entityAttributeToServerNameMapping setValue:@"url" forKey:@"url"];
+    [self.entityAttributeToServerNameMapping setValue:@"verified" forKey:@"verified"];
+    [self.entityAttributeToServerNameMapping setValue:@"location.distance" forKey:@"distance"];
 
     // relationships
 //    [self.entityAttributeToServerNameMapping setValue:@"invitee" forKey:@"invitees"];
@@ -24,31 +34,33 @@
 + (void) searchVenuesForTerm:(NSString *)searchTerm
                     latitude:(NSNumber *)latitude
                    longitude:(NSNumber *)longitude
-                  categoryID:(NSNumber *)categoryID
 {
     // build parameter list
     NSMutableDictionary *parametersDict = [[NSMutableDictionary alloc] init];
 
-    [parametersDict setValue:latitude forKey:@"latitude"];
-    [parametersDict setValue:longitude forKey:@"longitude"];
-    [parametersDict setValue:categoryID forKey:@"categoryId"];
-    [parametersDict setValue:searchTerm forKey:@"search_term"];
+    [parametersDict setValue:[NSString stringWithFormat:@"%@,%@",latitude, longitude]
+                      forKey:@"ll"];
+    [parametersDict setValue:searchTerm forKey:@"query"];
 
-    [[ServerManager sharedManager] initRequestForType:kServerRequestSearchEvents
-                                       withParameters:parametersDict
-                                            showModal:YES
-                                       successHandler:^(ServerManager *manager, id response, NSError *error)
-                                       {
-                                           if ([response isKindOfClass:[NSDictionary class]])
-                                           {
-//                                               [self importObjects:[response valueForKey:@"venues"]];
-                                               [self importObjects:response];
-                                           }
-                                       }
-                                       failureHandler:^(ServerManager *manager, id response, NSError *error)
-                                       {
+    [parametersDict setValue:@"2UQPKGUSVLXJD1EZDPMU40GY1C2XVFGNNZO1QOAZEZNY1Z4U" forKey:@"client_secret"];
+    [parametersDict setValue:@"T5QGLBP4UIP32WD5KLSRRRMMPSJRQE0SZX5JZVDQBTRKDTSL" forKey:@"client_id"];
+    [parametersDict setValue:@"20140118" forKey:@"v"];
 
-                                       }];
+
+    [[BOAPIClient sharedClient]
+                  GET:@"venues/search"
+           parameters:parametersDict
+              success:^(NSURLSessionDataTask *__unused task, id JSON)
+            {
+                if ([JSON isKindOfClass:[NSDictionary class]])
+                {
+                    [self importObjects:[JSON objectForKey:@"response"]];
+                }
+            }
+              failure:^(NSURLSessionDataTask *__unused task, NSError *error)
+            {
+                NSLog(@"ERROR!! in searchVenues %@", error.localizedDescription);
+            }];
 }
 
 + (void) importObjects:(NSDictionary *)importDataDictionary
