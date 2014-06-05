@@ -92,22 +92,22 @@
 		36698E5DA43D190C27F59B38 /* UILabel+(QuickCreate).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+(QuickCreate).h"; sourceTree = "<group>"; };
 		36698F0E1A841010A57BD285 /* BOAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOAPIClient.h; sourceTree = "<group>"; };
 		6577D2A4A4564C8287611401 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA08CFBF193E9FF0007B733B /* OriginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OriginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA08CFBF193E9FF0007B733B /* Espresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Espresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08CFC2193E9FF0007B733B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA08CFC4193E9FF0007B733B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EA08CFC6193E9FF0007B733B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA08CFC8193E9FF0007B733B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		EA08CFCC193E9FF0007B733B /* OriginApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OriginApp-Info.plist"; sourceTree = "<group>"; };
+		EA08CFCC193E9FF0007B733B /* Espresso-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Espresso-Info.plist"; sourceTree = "<group>"; };
 		EA08CFCE193E9FF0007B733B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA08CFD0193E9FF0007B733B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA08CFD2193E9FF0007B733B /* OriginApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OriginApp-Prefix.pch"; sourceTree = "<group>"; };
+		EA08CFD2193E9FF0007B733B /* Espresso-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Espresso-Prefix.pch"; sourceTree = "<group>"; };
 		EA08CFD3193E9FF0007B733B /* BOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BOAppDelegate.h; sourceTree = "<group>"; };
 		EA08CFD4193E9FF0007B733B /* BOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BOAppDelegate.m; sourceTree = "<group>"; };
 		EA08CFD7193E9FF0007B733B /* OriginApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OriginApp.xcdatamodel; sourceTree = "<group>"; };
 		EA08CFD9193E9FF0007B733B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EA08CFDF193E9FF0007B733B /* OriginAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OriginAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA08CFDF193E9FF0007B733B /* EspressoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08CFE0193E9FF0007B733B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		EA08CFE9193E9FF0007B733B /* OriginAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OriginAppTests-Info.plist"; sourceTree = "<group>"; };
+		EA08CFE9193E9FF0007B733B /* EspressoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EspressoTests-Info.plist"; sourceTree = "<group>"; };
 		EA08CFEB193E9FF0007B733B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA08CFED193E9FF0007B733B /* OriginAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OriginAppTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,8 +197,8 @@
 		EA08CFC0193E9FF0007B733B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA08CFBF193E9FF0007B733B /* OriginApp.app */,
-				EA08CFDF193E9FF0007B733B /* OriginAppTests.xctest */,
+				EA08CFBF193E9FF0007B733B /* Espresso.app */,
+				EA08CFDF193E9FF0007B733B /* EspressoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,10 +247,10 @@
 		EA08CFCB193E9FF0007B733B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA08CFCC193E9FF0007B733B /* OriginApp-Info.plist */,
+				EA08CFCC193E9FF0007B733B /* Espresso-Info.plist */,
 				EA08CFCD193E9FF0007B733B /* InfoPlist.strings */,
 				EA08CFD0193E9FF0007B733B /* main.m */,
-				EA08CFD2193E9FF0007B733B /* OriginApp-Prefix.pch */,
+				EA08CFD2193E9FF0007B733B /* Espresso-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 		EA08CFE8193E9FF0007B733B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA08CFE9193E9FF0007B733B /* OriginAppTests-Info.plist */,
+				EA08CFE9193E9FF0007B733B /* EspressoTests-Info.plist */,
 				EA08CFEA193E9FF0007B733B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -276,9 +276,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA08CFBE193E9FF0007B733B /* OriginApp */ = {
+		EA08CFBE193E9FF0007B733B /* Espresso */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA08CFF1193E9FF0007B733B /* Build configuration list for PBXNativeTarget "OriginApp" */;
+			buildConfigurationList = EA08CFF1193E9FF0007B733B /* Build configuration list for PBXNativeTarget "Espresso" */;
 			buildPhases = (
 				A15F09E1C78542E4B9F3261E /* Check Pods Manifest.lock */,
 				EA08CFBB193E9FF0007B733B /* Sources */,
@@ -290,14 +290,14 @@
 			);
 			dependencies = (
 			);
-			name = OriginApp;
+			name = Espresso;
 			productName = OriginApp;
-			productReference = EA08CFBF193E9FF0007B733B /* OriginApp.app */;
+			productReference = EA08CFBF193E9FF0007B733B /* Espresso.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA08CFDE193E9FF0007B733B /* OriginAppTests */ = {
+		EA08CFDE193E9FF0007B733B /* EspressoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA08CFF4193E9FF0007B733B /* Build configuration list for PBXNativeTarget "OriginAppTests" */;
+			buildConfigurationList = EA08CFF4193E9FF0007B733B /* Build configuration list for PBXNativeTarget "EspressoTests" */;
 			buildPhases = (
 				EA08CFDB193E9FF0007B733B /* Sources */,
 				EA08CFDC193E9FF0007B733B /* Frameworks */,
@@ -308,9 +308,9 @@
 			dependencies = (
 				EA08CFE6193E9FF0007B733B /* PBXTargetDependency */,
 			);
-			name = OriginAppTests;
+			name = EspressoTests;
 			productName = OriginAppTests;
-			productReference = EA08CFDF193E9FF0007B733B /* OriginAppTests.xctest */;
+			productReference = EA08CFDF193E9FF0007B733B /* EspressoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -328,7 +328,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EA08CFBA193E9FF0007B733B /* Build configuration list for PBXProject "OriginApp" */;
+			buildConfigurationList = EA08CFBA193E9FF0007B733B /* Build configuration list for PBXProject "Espresso" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -338,12 +338,10 @@
 			mainGroup = EA08CFB6193E9FF0007B733B;
 			productRefGroup = EA08CFC0193E9FF0007B733B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
-				EA08CFBE193E9FF0007B733B /* OriginApp */,
-				EA08CFDE193E9FF0007B733B /* OriginAppTests */,
+				EA08CFBE193E9FF0007B733B /* Espresso */,
+				EA08CFDE193E9FF0007B733B /* EspressoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -443,7 +441,7 @@
 /* Begin PBXTargetDependency section */
 		EA08CFE6193E9FF0007B733B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA08CFBE193E9FF0007B733B /* OriginApp */;
+			target = EA08CFBE193E9FF0007B733B /* Espresso */;
 			targetProxy = EA08CFE5193E9FF0007B733B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -547,9 +545,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OriginApp/OriginApp-Prefix.pch";
-				INFOPLIST_FILE = "OriginApp/OriginApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "OriginApp/Espresso-Prefix.pch";
+				INFOPLIST_FILE = "OriginApp/Espresso-Info.plist";
+				PRODUCT_NAME = Espresso;
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -562,9 +561,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OriginApp/OriginApp-Prefix.pch";
-				INFOPLIST_FILE = "OriginApp/OriginApp-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "OriginApp/Espresso-Prefix.pch";
+				INFOPLIST_FILE = "OriginApp/Espresso-Info.plist";
+				PRODUCT_NAME = Espresso;
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -585,8 +585,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "OriginAppTests/OriginAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "OriginAppTests/EspressoTests-Info.plist";
+				PRODUCT_NAME = EspressoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -603,8 +603,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OriginApp/OriginApp-Prefix.pch";
-				INFOPLIST_FILE = "OriginAppTests/OriginAppTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "OriginAppTests/EspressoTests-Info.plist";
+				PRODUCT_NAME = EspressoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -613,7 +613,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA08CFBA193E9FF0007B733B /* Build configuration list for PBXProject "OriginApp" */ = {
+		EA08CFBA193E9FF0007B733B /* Build configuration list for PBXProject "Espresso" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA08CFEF193E9FF0007B733B /* Debug */,
@@ -622,21 +622,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA08CFF1193E9FF0007B733B /* Build configuration list for PBXNativeTarget "OriginApp" */ = {
+		EA08CFF1193E9FF0007B733B /* Build configuration list for PBXNativeTarget "Espresso" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA08CFF2193E9FF0007B733B /* Debug */,
 				EA08CFF3193E9FF0007B733B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		EA08CFF4193E9FF0007B733B /* Build configuration list for PBXNativeTarget "OriginAppTests" */ = {
+		EA08CFF4193E9FF0007B733B /* Build configuration list for PBXNativeTarget "EspressoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA08CFF5193E9FF0007B733B /* Debug */,
 				EA08CFF6193E9FF0007B733B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

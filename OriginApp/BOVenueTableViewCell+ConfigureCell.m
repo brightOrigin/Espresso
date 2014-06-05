@@ -12,6 +12,9 @@
 {
     self.venueNameLbl.text = venue.name;
     self.venueAddressLbl.text = venue.address;
+
+    double distanceInMiles = ([venue.distance doubleValue]/1000)*0.6;
+    self.venueDistanceLbl.text = [NSString stringWithFormat:@"%.1fmi", distanceInMiles];
 }
 
 @end

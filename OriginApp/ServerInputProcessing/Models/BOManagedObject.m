@@ -539,8 +539,7 @@
                         // TODO: update this to use the processNewOrUpdatedObject: method that will allow for the subclass to specify
                         // TODO: a different id name like user_id
                         [self updateRelationship:currentAttributeName
-                                      withEntity:[[((NSRelationshipDescription *) currentAttribute) destinationEntity]
-                              name]
+                                      withEntity:[[((NSRelationshipDescription *) currentAttribute) destinationEntity] name]
                                           withID:[NSNumber numberWithInt:[[data safeNullValueForKey:serverName]
                               integerValue]]];
                     }

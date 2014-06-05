@@ -70,19 +70,4 @@
                               encoding:NSUTF8StringEncoding];
 }
 
-- (NSInteger) heightForStringWithFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode minHeight:(NSInteger)minHeight
-{
-    CGSize stringSize = [self sizeWithFont:font
-                         constrainedToSize:size
-                             lineBreakMode:lineBreakMode];
-
-    if (stringSize.height < minHeight)
-    {
-        return minHeight;
-    }
-    else
-    {
-        return (NSInteger) ceilf(stringSize.height);
-    }
-}
 @end

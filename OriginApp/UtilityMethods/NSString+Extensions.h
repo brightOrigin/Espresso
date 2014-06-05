@@ -10,6 +10,5 @@
 - (BOOL)isNotBlank;
 - (NSString *) decodeHtml;
 - (NSString *) decodeUTF8;
-- (NSInteger) heightForStringWithFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode minHeight:(NSInteger)minHeight;
 
 @end

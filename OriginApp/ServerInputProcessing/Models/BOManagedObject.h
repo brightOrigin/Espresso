@@ -5,7 +5,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 static NSString *const kEntityAttributeToServerNameSelf = @"___SELF___";
 
 @interface BOManagedObject : NSManagedObject
@@ -36,7 +35,7 @@ static NSString *const kEntityAttributeToServerNameSelf = @"___SELF___";
 
 + (void) processUpdatedObjects:(NSArray *)updatedObjects withKey:(NSString *)key inContext:(NSManagedObjectContext *)context;
 
-+ (NSArray *) getArrayForAttribute:(NSString *)attributeName fromResults:(NSArray *)resultsArray;
++ (NSArray *) getArrayForAttribute:(NSString *)attributeName fromResults:(NSArray *)resultsArray inContext:(NSManagedObjectContext *)context;
 + (BOOL) doesUpdateKey:(id)updateKey matchExistingKey:(id)existingKey attributeType:(NSAttributeType)attributeType;
 
 + (void) processDeletedObjects:(NSArray *)deletedObjects inContext:(NSManagedObjectContext *)context;

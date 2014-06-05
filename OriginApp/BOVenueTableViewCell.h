@@ -11,5 +11,6 @@ static NSString *const kVenueTableCellIdentifier = @"VenueTableViewCell";
 
 @property (nonatomic, strong) UILabel *venueNameLbl;
 @property (nonatomic, strong) UILabel *venueAddressLbl;
+@property (nonatomic, strong) UILabel *venueDistanceLbl;
 
 @end

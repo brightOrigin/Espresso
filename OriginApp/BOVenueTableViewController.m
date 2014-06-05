@@ -6,6 +6,7 @@
 #import "BOVenueTableViewController.h"
 #import "BOVenueTableViewCell.h"
 #import "BOVenueTableViewCell+ConfigureCell.h"
+#import "BOUtilityMethods.h"
 
 
 @implementation BOVenueTableViewController
@@ -28,7 +29,7 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Espresso Bars";
+    self.title = @"SOMA Espresso Bars";
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reloadData)
@@ -43,8 +44,10 @@
 
     // run test search
     [Venue searchVenuesForTerm:@"espresso"
-                      latitude:[NSNumber numberWithDouble:37.33]
-                     longitude:[NSNumber numberWithDouble:-122.03]];
+                      latitude:[NSNumber numberWithDouble:37.782749]
+                     longitude:[NSNumber numberWithDouble:-122.406495]];
+
+//    [Venue searchVenuesForTerm:@"espresso" near:@"SoMA, San Francisco, CA"];
 }
 
 #pragma mark Subclass Setup methods
@@ -54,7 +57,7 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds
                                                           style:UITableViewStylePlain];
     tableView.rowHeight = 60;
-    tableView.backgroundColor = [UIColor darkGrayColor];
+    tableView.backgroundColor = RGB(225, 225, 225);
 
     return tableView;
 }

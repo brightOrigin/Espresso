@@ -20,4 +20,7 @@
                     latitude:(NSNumber *)latitude
                    longitude:(NSNumber *)longitude;
 
++ (void) searchVenuesForTerm:(NSString *)searchTerm
+                        near:(NSString *)nearLocation;
+
 @end
