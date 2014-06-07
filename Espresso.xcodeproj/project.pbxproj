@@ -33,7 +33,7 @@
 		EA08CFCF193E9FF0007B733B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA08CFCD193E9FF0007B733B /* InfoPlist.strings */; };
 		EA08CFD1193E9FF0007B733B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA08CFD0193E9FF0007B733B /* main.m */; };
 		EA08CFD5193E9FF0007B733B /* BOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA08CFD4193E9FF0007B733B /* BOAppDelegate.m */; };
-		EA08CFD8193E9FF0007B733B /* OriginApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA08CFD6193E9FF0007B733B /* OriginApp.xcdatamodeld */; };
+		EA08CFD8193E9FF0007B733B /* Espresso.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA08CFD6193E9FF0007B733B /* Espresso.xcdatamodeld */; };
 		EA08CFDA193E9FF0007B733B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA08CFD9193E9FF0007B733B /* Images.xcassets */; };
 		EA08CFE1193E9FF0007B733B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFE0193E9FF0007B733B /* XCTest.framework */; };
 		EA08CFE2193E9FF0007B733B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFC2193E9FF0007B733B /* Foundation.framework */; };
@@ -103,7 +103,7 @@
 		EA08CFD2193E9FF0007B733B /* Espresso-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Espresso-Prefix.pch"; sourceTree = "<group>"; };
 		EA08CFD3193E9FF0007B733B /* BOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BOAppDelegate.h; sourceTree = "<group>"; };
 		EA08CFD4193E9FF0007B733B /* BOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BOAppDelegate.m; sourceTree = "<group>"; };
-		EA08CFD7193E9FF0007B733B /* OriginApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OriginApp.xcdatamodel; sourceTree = "<group>"; };
+		EA08CFD7193E9FF0007B733B /* Espresso.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Espresso.xcdatamodel; sourceTree = "<group>"; };
 		EA08CFD9193E9FF0007B733B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA08CFDF193E9FF0007B733B /* EspressoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08CFE0193E9FF0007B733B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -186,8 +186,8 @@
 		EA08CFB6193E9FF0007B733B = {
 			isa = PBXGroup;
 			children = (
-				EA08CFCA193E9FF0007B733B /* OriginApp */,
-				EA08CFE7193E9FF0007B733B /* OriginAppTests */,
+				EA08CFCA193E9FF0007B733B /* Espresso */,
+				EA08CFE7193E9FF0007B733B /* EspressoTests */,
 				EA08CFC1193E9FF0007B733B /* Frameworks */,
 				EA08CFC0193E9FF0007B733B /* Products */,
 				14AFDF88837B40F69C7F7B15 /* Pods.xcconfig */,
@@ -216,13 +216,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA08CFCA193E9FF0007B733B /* OriginApp */ = {
+		EA08CFCA193E9FF0007B733B /* Espresso */ = {
 			isa = PBXGroup;
 			children = (
 				EA08CFD3193E9FF0007B733B /* BOAppDelegate.h */,
 				EA08CFD4193E9FF0007B733B /* BOAppDelegate.m */,
 				EA08CFD9193E9FF0007B733B /* Images.xcassets */,
-				EA08CFD6193E9FF0007B733B /* OriginApp.xcdatamodeld */,
+				EA08CFD6193E9FF0007B733B /* Espresso.xcdatamodeld */,
 				EA08CFCB193E9FF0007B733B /* Supporting Files */,
 				36698F0E1A841010A57BD285 /* BOAPIClient.h */,
 				36698C1D04E6362E715BF3BA /* BOAPIClient.m */,
@@ -241,6 +241,7 @@
 				366989A8242A284122FFEE5D /* BOVenueTableViewController.m */,
 				36698D7B1BC882E5A28B77FE /* BOVenueTableViewController.h */,
 			);
+			name = Espresso;
 			path = OriginApp;
 			sourceTree = "<group>";
 		};
@@ -255,12 +256,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EA08CFE7193E9FF0007B733B /* OriginAppTests */ = {
+		EA08CFE7193E9FF0007B733B /* EspressoTests */ = {
 			isa = PBXGroup;
 			children = (
 				EA08CFED193E9FF0007B733B /* OriginAppTests.m */,
 				EA08CFE8193E9FF0007B733B /* Supporting Files */,
 			);
+			name = EspressoTests;
 			path = OriginAppTests;
 			sourceTree = "<group>";
 		};
@@ -405,7 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA08CFD1193E9FF0007B733B /* main.m in Sources */,
-				EA08CFD8193E9FF0007B733B /* OriginApp.xcdatamodeld in Sources */,
+				EA08CFD8193E9FF0007B733B /* Espresso.xcdatamodeld in Sources */,
 				EA08CFD5193E9FF0007B733B /* BOAppDelegate.m in Sources */,
 				366980DC01495DD2E7ADDB50 /* BOAPIClient.m in Sources */,
 				3669848613EFF4DD947353EF /* BOCDImportOperation.m in Sources */,
@@ -643,13 +645,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EA08CFD6193E9FF0007B733B /* OriginApp.xcdatamodeld */ = {
+		EA08CFD6193E9FF0007B733B /* Espresso.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EA08CFD7193E9FF0007B733B /* OriginApp.xcdatamodel */,
+				EA08CFD7193E9FF0007B733B /* Espresso.xcdatamodel */,
 			);
-			currentVersion = EA08CFD7193E9FF0007B733B /* OriginApp.xcdatamodel */;
-			path = OriginApp.xcdatamodeld;
+			currentVersion = EA08CFD7193E9FF0007B733B /* Espresso.xcdatamodel */;
+			path = Espresso.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

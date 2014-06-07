@@ -6,10 +6,10 @@
 #import "BOStore.h"
 #import "BOUtilityMethods.h"
 
-#define kCoreDataName                   @"OriginApp"
-#define kCoreDataFile                   @"OriginApp.sqlite"
-#define kCoreDataSHMFile                @"OriginApp.sqlite-shm"
-#define kCoreDataWALFile                @"OriginApp.sqlite-wal"
+#define kCoreDataName                   @"Espresso"
+#define kCoreDataFile                   @"Espresso.sqlite"
+#define kCoreDataSHMFile                @"Espresso.sqlite-shm"
+#define kCoreDataWALFile                @"Espresso.sqlite-wal"
 
 @interface BOStore ()
 
