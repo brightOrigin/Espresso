@@ -42,7 +42,7 @@
 {
     [super viewDidAppear:animated];
 
-    // run test search
+    // run search
     [Venue searchVenuesForTerm:@"espresso"
                       latitude:[NSNumber numberWithDouble:37.782749]
                      longitude:[NSNumber numberWithDouble:-122.406495]];
@@ -91,14 +91,16 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Venue"];
     self.fetchRequest = fetchRequest;
 
+    // Use if you need a more refined search
 //    NSPredicate *predicate = [NSPredicate predicateWithFormat:@""];
+//    self.fetchRequest.predicate = predicate;
+
     BOOL sortAscending = YES;
 
     NSSortDescriptor *nameSortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance"
                                                                        ascending:sortAscending];
 
     self.fetchRequest.sortDescriptors = @[nameSortDescriptor];
-//    self.fetchRequest.predicate = predicate;
 
     return self.fetchRequest;
 }
@@ -112,26 +114,5 @@
 {
     return nil;
 }
-
-/*
-- (void)       frcViewController:(FRCViewController *)frcViewController
-getObjectsFromServerForPageCount:(NSInteger)pageCount
-                         pageNum:(NSInteger)pageNum
-{
-
-}
-
-- (BOOL) moreServerObjectsAvailableForFRCViewController:(FRCViewController *)frcViewController
-{
-    return NO;
-}
-
-- (void) frcViewController:(FRCViewController *)frcViewController
-           didSelectObject:(id)selectedObject
-                   atIndex:(NSInteger)index
-{
-
-}
-*/
 
 @end

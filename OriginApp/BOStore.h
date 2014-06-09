@@ -5,7 +5,13 @@
 
 #import <Foundation/Foundation.h>
 
-
+/**
+*
+* This class handles all communication to the local data store including the
+* building of the Core Data stack as well as the creation of private contexts
+* for background processing of objects.
+*
+*/
 @interface BOStore : NSObject
 
 @property (nonatomic, strong, readonly) NSManagedObjectContext *mainManagedObjectContext;

@@ -4,11 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BOBaseManagedObject.h"
+#import "BOStringIDManagedObject.h"
 
 #define kVenueImportDidFinishNotification       @"VenueImportDidFinishNotification"
 
-@interface Venue : BOBaseManagedObject
+@interface Venue : BOStringIDManagedObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *address;
@@ -16,11 +16,7 @@
 @property (nonatomic, strong) NSNumber *verified;
 @property (nonatomic, strong) NSNumber *distance;
 
-+ (void) searchVenuesForTerm:(NSString *)searchTerm
-                    latitude:(NSNumber *)latitude
-                   longitude:(NSNumber *)longitude;
-
-+ (void) searchVenuesForTerm:(NSString *)searchTerm
-                        near:(NSString *)nearLocation;
++ (void) searchVenuesForTerm:(NSString *)searchTerm latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude;
++ (void) searchVenuesForTerm:(NSString *)searchTerm near:(NSString *)nearLocation;
 
 @end

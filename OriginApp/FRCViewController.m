@@ -8,7 +8,6 @@
 #import "BOUtilityMethods.h"
 #import "BOVenueTableViewCell.h"
 #import "BOVenueTableViewCell+ConfigureCell.h"
-#import "Venue.h"
 #import "BOAPIClient.h"
 
 @interface FRCViewController ()
@@ -175,45 +174,4 @@
 {
     [self setFRC];
 }
-
-
-/*
-- (void) startServerRefresh:(NSNotification *)notification
-{
-    // reset the pagination flags
-//    [self updatePageNum:1];
-//    [self.frcViewControllerDelegate frcViewController:self
-//                     getObjectsFromServerForPageCount:[self currentPageCount]
-//                                              pageNum:[self currentPageNum]];
-}
-
-#pragma mark FRCViewControllerDelegate Methods
-
-- (void) container:(FRCContainerViewController *)containerController didChangePredicate:(NSPredicate *)predicate
-{
-    [self.frcDataSource changePredicate:predicate ? predicate : self.fetchRequest.predicate];
-}
-
-#pragma mark -
-#pragma mark UIScrollViewDelegate Methods
-
-- (void) scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    CGPoint offset = scrollView.contentOffset;
-    CGRect bounds = scrollView.bounds;
-    CGSize size = scrollView.contentSize;
-    UIEdgeInsets inset = scrollView.contentInset;
-    float y = offset.y + bounds.size.height - inset.bottom;
-    float h = size.height;
-
-    float reload_distance = 250;
-
-    if (y > (h - reload_distance))
-    {
-        // trigger more results method
-    }
-
-}
-*/
-
 @end

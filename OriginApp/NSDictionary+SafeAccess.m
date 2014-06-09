@@ -1,5 +1,5 @@
 
-@implementation NSDictionary (Extensions)
+@implementation NSDictionary (SafeAccess)
 
 
 - (id)safeNullValueForKey:(NSString *)key

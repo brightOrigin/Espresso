@@ -6,6 +6,11 @@
 #import <Foundation/Foundation.h>
 #import "FRCViewController.h"
 
-
+/**
+*
+* Subclass the @FRCViewController and handle any controller specific
+* initialization for model and table view.
+*
+*/
 @interface BOVenueTableViewController : FRCViewController <FRCViewControllerDelegate>
 @end

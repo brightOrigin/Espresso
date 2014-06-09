@@ -129,8 +129,6 @@ Resets core data stack after deletion so it can be rebuilt
     _mainManagedObjectContext = nil;
     _managedObjectModel = nil;
     _persistentStoreCoordinator = nil;
-
-//    [Boutility getMOContext];
 }
 
 - (BOOL) resetCoreDB
@@ -215,7 +213,7 @@ Resets core data stack after deletion so it can be rebuilt
     {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:kCoreDataName withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:kCoreDataName withExtension:@"mom"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }

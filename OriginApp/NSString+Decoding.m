@@ -3,10 +3,10 @@
 //
 
 
-#import "NSString+Extensions.h"
+#import "NSString+Decoding.h"
 
 
-@implementation NSString (Extensions)
+@implementation NSString (Decoding)
 
 - (BOOL)isNotBlank
 {

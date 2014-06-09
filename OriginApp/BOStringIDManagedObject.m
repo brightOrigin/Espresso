@@ -3,11 +3,11 @@
 // Copyright (c) 2014 Bright Origin. All rights reserved.
 //
 
-#import "BOBaseManagedObject.h"
+#import "BOStringIDManagedObject.h"
 #import "BOCDImportOperation.h"
-#import "NSDictionary+Extensions.h"
+#import "NSDictionary+SafeAccess.h"
 
-@implementation BOBaseManagedObject
+@implementation BOStringIDManagedObject
 
 @dynamic id;
 
@@ -45,15 +45,6 @@
 
 - (id) getValueForKeyAttributeWithName:(NSString *)keyAttributeName value:(id)value
 {
-//    if ([value isKindOfClass:[NSString class]])
-//    {
-//        return [NSNumber numberWithInteger:[value integerValue]];
-//    }
-//    else
-//    {
-//        return value;
-//    }
-
     return value;
 }
 
@@ -78,7 +69,6 @@
     NSMutableArray *returnArray = [[NSMutableArray alloc] initWithCapacity:[resultsArray count]];
     for (NSDictionary *currentResult in resultsArray)
     {
-//        [returnArray addObject:[NSNumber numberWithInt:[[currentResult safeNullValueForKey:attributeName] intValue]]];
         [returnArray addObject:[currentResult safeNullValueForKey:attributeName]];
     }
 

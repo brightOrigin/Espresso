@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		366980DC01495DD2E7ADDB50 /* BOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698C1D04E6362E715BF3BA /* BOAPIClient.m */; };
-		3669811D0B85BCE9CFA4EF0C /* BOVenueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698D0072CB30718EC99F5E /* BOVenueTableViewCell.m */; };
-		3669848613EFF4DD947353EF /* BOCDImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698CC13E83CE5841875989 /* BOCDImportOperation.m */; };
-		3669851782F13E5665158A84 /* BOVenueTableViewCell+ConfigureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698342622FD36E33B9BBCC /* BOVenueTableViewCell+ConfigureCell.m */; };
-		36698518CDACAF7961D6EDB0 /* VenueImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698823BEE92EEF9262F0E0 /* VenueImportOperation.m */; };
-		3669868C1FEB28CEA92E2CB8 /* BOSimpleManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698B29271EBAA978C721EA /* BOSimpleManagedObject.m */; };
-		366986B14B6D487855F553F6 /* BOVenueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 366989A8242A284122FFEE5D /* BOVenueTableViewController.m */; };
-		366986DF71F6E406EFAD2ED7 /* FRCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 366981BB6B0DC08C1BC73E7C /* FRCDataSource.m */; };
-		36698720BA7489E2BD021ADB /* NSFetchedResultsController+LoggedFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669894129EB1938A4977A5D /* NSFetchedResultsController+LoggedFetch.m */; };
-		3669884C267B5DD4D83B27D1 /* BOManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698AA4F210890B13037C00 /* BOManagedObject.m */; };
-		3669884DED9FDB1FC60DC855 /* BOBaseManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698105FDCBE2AA8A49A724 /* BOBaseManagedObject.m */; };
-		3669887279CE6B835EC99D73 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 366985BD9D5BB6F5749BACF5 /* NSString+Extensions.m */; };
-		36698A0B890FDFD887388D17 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 366987A5296887CEE9B22849 /* Venue.m */; };
-		36698A0BC65C74696F7E1108 /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669843463C599680F414669 /* NSDictionary+Extensions.m */; };
-		36698B726AB14AE752D1ED08 /* BOUtilityMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 366982DBC55C5D4DA2CEC479 /* BOUtilityMethods.m */; };
-		36698C2D088F9B3D1DF6F593 /* FRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698D0AA169E6A4AA224BEB /* FRCViewController.m */; };
-		36698DE79B8FBE92EBBB0F5C /* BOStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669895830ABACAB0F10D616 /* BOStore.m */; };
-		36698F589ED8D396AA834A29 /* UILabel+(QuickCreate).m in Sources */ = {isa = PBXBuildFile; fileRef = 366988C23EF1FD908D19C55D /* UILabel+(QuickCreate).m */; };
+		366980A9961695017AF3FB21 /* FRCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698A6A3EEDDA3B5B29BF9D /* FRCDataSource.m */; };
+		3669813419BB5A4BCC56F429 /* BOManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698D8AD95C136A6A6B7FE0 /* BOManagedObject.m */; };
+		36698303262332FF851FD3F9 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698B1FE435A593E0B6092C /* Venue.m */; };
+		36698489B5A4C1A1FC592916 /* BOVenueTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698AC08CBC33AF3D849A08 /* BOVenueTableViewController.m */; };
+		3669858A5CC8FB6AA8A8EBAA /* BOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698360C003602F5D1CF7E0 /* BOAppDelegate.m */; };
+		366985D7DB82F9470C5A9CB3 /* BOAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 366981F26702831156B4E7FD /* BOAPIClient.m */; };
+		36698787EBCEC3C0B0136BBE /* Espresso.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 36698F45B519F82D64AF58FE /* Espresso.xcdatamodel */; };
+		366987F1969CEF889BE1FD18 /* BOCDImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669829F5538A18E408BA3DA /* BOCDImportOperation.m */; };
+		366988EAA9FCA4E299A1C505 /* BOVenueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698E7DC9E4DD3FCFD1B2BC /* BOVenueTableViewCell.m */; };
+		36698910E66683793B9910CF /* BOStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698A375C57268181D9C947 /* BOStore.m */; };
+		36698931CF8B7662ECC58863 /* VenueImportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 366989D9958C9A5C38D3242A /* VenueImportOperation.m */; };
+		366989C5C94798EE3CC4AC73 /* NSString+Decoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669866E85BC88FAC983F41E /* NSString+Decoding.m */; };
+		36698A8B31316B3636FF197B /* FRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669896392A7AB251FBE8B86 /* FRCViewController.m */; };
+		36698B29C1FBDF8ACC294B3B /* UILabel+(QuickCreate).m in Sources */ = {isa = PBXBuildFile; fileRef = 3669839FA6B7539CDF0B3EAE /* UILabel+(QuickCreate).m */; };
+		36698BE006869D6DB73CDE2D /* BOStringIDManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 366981B3EEF8A7372CEA2951 /* BOStringIDManagedObject.m */; };
+		36698F38F18C1994FB7E15ED /* BOVenueTableViewCell+ConfigureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 366984639CF3FD022F5FFE4A /* BOVenueTableViewCell+ConfigureCell.m */; };
+		36698F8DB377CB6FEB05C491 /* BOUtilityMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698C088150C15A60263311 /* BOUtilityMethods.m */; };
+		36698FA5E54B57A1D29FB00A /* NSFetchedResultsController+LoggedFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 36698ED6029F5512391A3C67 /* NSFetchedResultsController+LoggedFetch.m */; };
+		36698FB37FADC7F3ADAAC3D1 /* NSDictionary+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3669829E52D1C8E22CD13C68 /* NSDictionary+SafeAccess.m */; };
 		77CD42E886BB408280202B57 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6577D2A4A4564C8287611401 /* libPods.a */; };
 		EA08CFC3193E9FF0007B733B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFC2193E9FF0007B733B /* Foundation.framework */; };
 		EA08CFC5193E9FF0007B733B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFC4193E9FF0007B733B /* CoreGraphics.framework */; };
@@ -32,8 +33,6 @@
 		EA08CFC9193E9FF0007B733B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFC8193E9FF0007B733B /* CoreData.framework */; };
 		EA08CFCF193E9FF0007B733B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA08CFCD193E9FF0007B733B /* InfoPlist.strings */; };
 		EA08CFD1193E9FF0007B733B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA08CFD0193E9FF0007B733B /* main.m */; };
-		EA08CFD5193E9FF0007B733B /* BOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA08CFD4193E9FF0007B733B /* BOAppDelegate.m */; };
-		EA08CFD8193E9FF0007B733B /* Espresso.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA08CFD6193E9FF0007B733B /* Espresso.xcdatamodeld */; };
 		EA08CFDA193E9FF0007B733B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA08CFD9193E9FF0007B733B /* Images.xcassets */; };
 		EA08CFE1193E9FF0007B733B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFE0193E9FF0007B733B /* XCTest.framework */; };
 		EA08CFE2193E9FF0007B733B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA08CFC2193E9FF0007B733B /* Foundation.framework */; };
@@ -55,42 +54,43 @@
 
 /* Begin PBXFileReference section */
 		14AFDF88837B40F69C7F7B15 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		3669800A249C820D48127D0B /* BOCDImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOCDImportOperation.h; sourceTree = "<group>"; };
-		366980489A9447D757C49FE5 /* BOBaseManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOBaseManagedObject.h; sourceTree = "<group>"; };
-		366980BBB94B2EE34C9C67FE /* BOVenueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOVenueTableViewCell.h; sourceTree = "<group>"; };
-		366980DC59CA6639C2A21776 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
-		36698105FDCBE2AA8A49A724 /* BOBaseManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOBaseManagedObject.m; sourceTree = "<group>"; };
-		366981BB6B0DC08C1BC73E7C /* FRCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRCDataSource.m; sourceTree = "<group>"; };
-		366982DBC55C5D4DA2CEC479 /* BOUtilityMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOUtilityMethods.m; sourceTree = "<group>"; };
-		366983092ACF9F9EFE823E9A /* BOVenueTableViewCell+ConfigureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BOVenueTableViewCell+ConfigureCell.h"; sourceTree = "<group>"; };
-		36698342622FD36E33B9BBCC /* BOVenueTableViewCell+ConfigureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BOVenueTableViewCell+ConfigureCell.m"; sourceTree = "<group>"; };
-		366983ADFAD7C16A718D30E3 /* BOSimpleManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOSimpleManagedObject.h; sourceTree = "<group>"; };
-		366983B7AD30E05E0682037E /* BOStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOStore.h; sourceTree = "<group>"; };
-		3669843463C599680F414669 /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extensions.m"; sourceTree = "<group>"; };
-		366985BD9D5BB6F5749BACF5 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
-		366985C7E4CA3C0534794C92 /* NSFetchedResultsController+LoggedFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+LoggedFetch.h"; sourceTree = "<group>"; };
-		3669871FB60EB7143747D1D7 /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extensions.h"; sourceTree = "<group>"; };
-		366987A5296887CEE9B22849 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
-		36698823BEE92EEF9262F0E0 /* VenueImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueImportOperation.m; sourceTree = "<group>"; };
-		3669883410D89CA0A54F303A /* FRCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRCDataSource.h; sourceTree = "<group>"; };
-		366988C23EF1FD908D19C55D /* UILabel+(QuickCreate).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+(QuickCreate).m"; sourceTree = "<group>"; };
-		3669891B6A1DC545E9E6A210 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
-		3669894129EB1938A4977A5D /* NSFetchedResultsController+LoggedFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+LoggedFetch.m"; sourceTree = "<group>"; };
-		3669895830ABACAB0F10D616 /* BOStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOStore.m; sourceTree = "<group>"; };
-		366989A8242A284122FFEE5D /* BOVenueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOVenueTableViewController.m; sourceTree = "<group>"; };
-		36698A36791F2E2EACB79736 /* BOUtilityMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOUtilityMethods.h; sourceTree = "<group>"; };
-		36698AA4F210890B13037C00 /* BOManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOManagedObject.m; sourceTree = "<group>"; };
-		36698AECB11D18C929FB9D29 /* VenueImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueImportOperation.h; sourceTree = "<group>"; };
-		36698B29271EBAA978C721EA /* BOSimpleManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOSimpleManagedObject.m; sourceTree = "<group>"; };
-		36698C1D04E6362E715BF3BA /* BOAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOAPIClient.m; sourceTree = "<group>"; };
-		36698CC13E83CE5841875989 /* BOCDImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOCDImportOperation.m; sourceTree = "<group>"; };
-		36698D0072CB30718EC99F5E /* BOVenueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOVenueTableViewCell.m; sourceTree = "<group>"; };
-		36698D0AA169E6A4AA224BEB /* FRCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRCViewController.m; sourceTree = "<group>"; };
-		36698D7B1BC882E5A28B77FE /* BOVenueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOVenueTableViewController.h; sourceTree = "<group>"; };
-		36698D9EB5A2446BBD834997 /* BOManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOManagedObject.h; sourceTree = "<group>"; };
-		36698E36E897565965CAD357 /* FRCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRCViewController.h; sourceTree = "<group>"; };
-		36698E5DA43D190C27F59B38 /* UILabel+(QuickCreate).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+(QuickCreate).h"; sourceTree = "<group>"; };
-		36698F0E1A841010A57BD285 /* BOAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOAPIClient.h; sourceTree = "<group>"; };
+		366980A9A9232A54D9DB9E2E /* UILabel+(QuickCreate).h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+(QuickCreate).h"; sourceTree = "<group>"; };
+		3669814135990DD7E0C63F86 /* NSString+Decoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Decoding.h"; sourceTree = "<group>"; };
+		3669814D35D0C1240B00DC92 /* BOVenueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOVenueTableViewCell.h; sourceTree = "<group>"; };
+		366981B3EEF8A7372CEA2951 /* BOStringIDManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOStringIDManagedObject.m; sourceTree = "<group>"; };
+		366981F26702831156B4E7FD /* BOAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOAPIClient.m; sourceTree = "<group>"; };
+		3669829E52D1C8E22CD13C68 /* NSDictionary+SafeAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeAccess.m"; sourceTree = "<group>"; };
+		3669829F5538A18E408BA3DA /* BOCDImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOCDImportOperation.m; sourceTree = "<group>"; };
+		366983035FC5FE78A391F78B /* FRCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRCDataSource.h; sourceTree = "<group>"; };
+		3669833117D774C7D8EF4FF8 /* FRCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRCViewController.h; sourceTree = "<group>"; };
+		36698360C003602F5D1CF7E0 /* BOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOAppDelegate.m; sourceTree = "<group>"; };
+		3669839FA6B7539CDF0B3EAE /* UILabel+(QuickCreate).m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+(QuickCreate).m"; sourceTree = "<group>"; };
+		366983A43F0442868C418D42 /* BOCDImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOCDImportOperation.h; sourceTree = "<group>"; };
+		3669842F820C18EAD2291E65 /* BOAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOAPIClient.h; sourceTree = "<group>"; };
+		366984639CF3FD022F5FFE4A /* BOVenueTableViewCell+ConfigureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BOVenueTableViewCell+ConfigureCell.m"; sourceTree = "<group>"; };
+		36698469EA56DD77CD3F1EFD /* VenueImportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueImportOperation.h; sourceTree = "<group>"; };
+		3669862E35AA244A4774BA32 /* BOUtilityMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOUtilityMethods.h; sourceTree = "<group>"; };
+		3669866E85BC88FAC983F41E /* NSString+Decoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Decoding.m"; sourceTree = "<group>"; };
+		366987EA2CA6B7CCB9E119F3 /* BOManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOManagedObject.h; sourceTree = "<group>"; };
+		366988664C12851EC11F5436 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		3669886F368A4FA39C2C3A20 /* BOStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOStore.h; sourceTree = "<group>"; };
+		3669896392A7AB251FBE8B86 /* FRCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRCViewController.m; sourceTree = "<group>"; };
+		366989CF09E2D8A628B6F5EC /* BOStringIDManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOStringIDManagedObject.h; sourceTree = "<group>"; };
+		366989D9958C9A5C38D3242A /* VenueImportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueImportOperation.m; sourceTree = "<group>"; };
+		36698A375C57268181D9C947 /* BOStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOStore.m; sourceTree = "<group>"; };
+		36698A6A3EEDDA3B5B29BF9D /* FRCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRCDataSource.m; sourceTree = "<group>"; };
+		36698A768CB3903C429D4E7C /* BOVenueTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOVenueTableViewController.h; sourceTree = "<group>"; };
+		36698AC08CBC33AF3D849A08 /* BOVenueTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOVenueTableViewController.m; sourceTree = "<group>"; };
+		36698B1FE435A593E0B6092C /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		36698B592A153D6DD153B52C /* BOVenueTableViewCell+ConfigureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BOVenueTableViewCell+ConfigureCell.h"; sourceTree = "<group>"; };
+		36698C088150C15A60263311 /* BOUtilityMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOUtilityMethods.m; sourceTree = "<group>"; };
+		36698CE02F5E2CAFFE8AC65F /* NSDictionary+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SafeAccess.h"; sourceTree = "<group>"; };
+		36698D1FC6F9648A72793DF9 /* BOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOAppDelegate.h; sourceTree = "<group>"; };
+		36698D8AD95C136A6A6B7FE0 /* BOManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOManagedObject.m; sourceTree = "<group>"; };
+		36698E7DC9E4DD3FCFD1B2BC /* BOVenueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOVenueTableViewCell.m; sourceTree = "<group>"; };
+		36698ED6029F5512391A3C67 /* NSFetchedResultsController+LoggedFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+LoggedFetch.m"; sourceTree = "<group>"; };
+		36698F45B519F82D64AF58FE /* Espresso.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Espresso.xcdatamodel; sourceTree = "<group>"; };
+		36698F9BC89AD5A5772AF06E /* NSFetchedResultsController+LoggedFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+LoggedFetch.h"; sourceTree = "<group>"; };
 		6577D2A4A4564C8287611401 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08CFBF193E9FF0007B733B /* Espresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Espresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08CFC2193E9FF0007B733B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,9 +101,6 @@
 		EA08CFCE193E9FF0007B733B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA08CFD0193E9FF0007B733B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA08CFD2193E9FF0007B733B /* Espresso-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Espresso-Prefix.pch"; sourceTree = "<group>"; };
-		EA08CFD3193E9FF0007B733B /* BOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BOAppDelegate.h; sourceTree = "<group>"; };
-		EA08CFD4193E9FF0007B733B /* BOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BOAppDelegate.m; sourceTree = "<group>"; };
-		EA08CFD7193E9FF0007B733B /* Espresso.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Espresso.xcdatamodel; sourceTree = "<group>"; };
 		EA08CFD9193E9FF0007B733B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA08CFDF193E9FF0007B733B /* EspressoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EspressoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA08CFE0193E9FF0007B733B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -139,48 +136,167 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		366983BC6F2234E4C13583EF /* Models */ = {
+		366980FFC9602CDD82BD1A46 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				366983B7AD30E05E0682037E /* BOStore.h */,
-				3669895830ABACAB0F10D616 /* BOStore.m */,
-				36698D9EB5A2446BBD834997 /* BOManagedObject.h */,
-				36698AA4F210890B13037C00 /* BOManagedObject.m */,
-				366980489A9447D757C49FE5 /* BOBaseManagedObject.h */,
-				36698105FDCBE2AA8A49A724 /* BOBaseManagedObject.m */,
-				366983ADFAD7C16A718D30E3 /* BOSimpleManagedObject.h */,
-				36698B29271EBAA978C721EA /* BOSimpleManagedObject.m */,
+				366988664C12851EC11F5436 /* Venue.h */,
+				36698B1FE435A593E0B6092C /* Venue.m */,
+				366989D9958C9A5C38D3242A /* VenueImportOperation.m */,
+				36698469EA56DD77CD3F1EFD /* VenueImportOperation.h */,
 			);
-			path = Models;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		366988BB25F396752FB2DD7D /* UtilityMethods */ = {
+		3669817104E158B70D9902C3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				36698A36791F2E2EACB79736 /* BOUtilityMethods.h */,
-				366982DBC55C5D4DA2CEC479 /* BOUtilityMethods.m */,
-				366980DC59CA6639C2A21776 /* NSString+Extensions.h */,
-				366985BD9D5BB6F5749BACF5 /* NSString+Extensions.m */,
-				3669871FB60EB7143747D1D7 /* NSDictionary+Extensions.h */,
-				3669843463C599680F414669 /* NSDictionary+Extensions.m */,
-				366985C7E4CA3C0534794C92 /* NSFetchedResultsController+LoggedFetch.h */,
-				3669894129EB1938A4977A5D /* NSFetchedResultsController+LoggedFetch.m */,
-				36698E5DA43D190C27F59B38 /* UILabel+(QuickCreate).h */,
-				366988C23EF1FD908D19C55D /* UILabel+(QuickCreate).m */,
+				36698A768CB3903C429D4E7C /* BOVenueTableViewController.h */,
+				36698AC08CBC33AF3D849A08 /* BOVenueTableViewController.m */,
 			);
-			path = UtilityMethods;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		36698B26276190E1B94D20A9 /* ServerInputProcessing */ = {
+		366982DB66124E37D7272A83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				366983BC6F2234E4C13583EF /* Models */,
-				3669883410D89CA0A54F303A /* FRCDataSource.h */,
-				366981BB6B0DC08C1BC73E7C /* FRCDataSource.m */,
-				36698E36E897565965CAD357 /* FRCViewController.h */,
-				36698D0AA169E6A4AA224BEB /* FRCViewController.m */,
+				36698F45B519F82D64AF58FE /* Espresso.xcdatamodel */,
 			);
-			path = ServerInputProcessing;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3669845611AF775AA1EA3B9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36698E7DC9E4DD3FCFD1B2BC /* BOVenueTableViewCell.m */,
+				3669814D35D0C1240B00DC92 /* BOVenueTableViewCell.h */,
+				366984639CF3FD022F5FFE4A /* BOVenueTableViewCell+ConfigureCell.m */,
+				36698B592A153D6DD153B52C /* BOVenueTableViewCell+ConfigureCell.h */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		366985EBB36BD8DC645CA2E5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				36698ED6029F5512391A3C67 /* NSFetchedResultsController+LoggedFetch.m */,
+				36698F9BC89AD5A5772AF06E /* NSFetchedResultsController+LoggedFetch.h */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		366986842838829AB6424530 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36698A6A3EEDDA3B5B29BF9D /* FRCDataSource.m */,
+				36698D8AD95C136A6A6B7FE0 /* BOManagedObject.m */,
+				366981B3EEF8A7372CEA2951 /* BOStringIDManagedObject.m */,
+				366983035FC5FE78A391F78B /* FRCDataSource.h */,
+				366987EA2CA6B7CCB9E119F3 /* BOManagedObject.h */,
+				366989CF09E2D8A628B6F5EC /* BOStringIDManagedObject.h */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3669869E69B290C1A0F7D8B0 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				3669817104E158B70D9902C3 /* Controllers */,
+				366980FFC9602CDD82BD1A46 /* Models */,
+				3669845611AF775AA1EA3B9E /* Views */,
+			);
+			name = Venues;
+			sourceTree = "<group>";
+		};
+		36698C4A09D6308D96AB7FC9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				36698FF2801C08B97AF73774 /* Controllers */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		36698C4B4E751474F88B4613 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				366985EBB36BD8DC645CA2E5 /* Categories */,
+				36698D361CE2F4B1F48B392B /* Controllers */,
+				366986842838829AB6424530 /* Models */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
+		36698D361CE2F4B1F48B392B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36698A375C57268181D9C947 /* BOStore.m */,
+				3669896392A7AB251FBE8B86 /* FRCViewController.m */,
+				3669833117D774C7D8EF4FF8 /* FRCViewController.h */,
+				3669886F368A4FA39C2C3A20 /* BOStore.h */,
+				3669829F5538A18E408BA3DA /* BOCDImportOperation.m */,
+				366983A43F0442868C418D42 /* BOCDImportOperation.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		36698D4171FE51DFD00D1390 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				36698360C003602F5D1CF7E0 /* BOAppDelegate.m */,
+				36698D1FC6F9648A72793DF9 /* BOAppDelegate.h */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		36698D6E1C69A44EC0D03D32 /* UtilityMethods */ = {
+			isa = PBXGroup;
+			children = (
+				3669862E35AA244A4774BA32 /* BOUtilityMethods.h */,
+				36698C088150C15A60263311 /* BOUtilityMethods.m */,
+			);
+			name = UtilityMethods;
+			sourceTree = "<group>";
+		};
+		36698D9FF3F460F6CBC7987A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				36698C4A09D6308D96AB7FC9 /* Networking */,
+				36698C4B4E751474F88B4613 /* Persistence */,
+				3669869E69B290C1A0F7D8B0 /* Venues */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		36698EB952C3F6F66D220B7C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				366980A9A9232A54D9DB9E2E /* UILabel+(QuickCreate).h */,
+				3669829E52D1C8E22CD13C68 /* NSDictionary+SafeAccess.m */,
+				3669866E85BC88FAC983F41E /* NSString+Decoding.m */,
+				3669839FA6B7539CDF0B3EAE /* UILabel+(QuickCreate).m */,
+				36698CE02F5E2CAFFE8AC65F /* NSDictionary+SafeAccess.h */,
+				3669814135990DD7E0C63F86 /* NSString+Decoding.h */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		36698EFBD9AE794639D8EC35 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				36698EB952C3F6F66D220B7C /* Categories */,
+				36698D4171FE51DFD00D1390 /* Delegate */,
+				36698D6E1C69A44EC0D03D32 /* UtilityMethods */,
+				366982DB66124E37D7272A83 /* Models */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		36698FF2801C08B97AF73774 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3669842F820C18EAD2291E65 /* BOAPIClient.h */,
+				366981F26702831156B4E7FD /* BOAPIClient.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		EA08CFB6193E9FF0007B733B = {
@@ -219,27 +335,10 @@
 		EA08CFCA193E9FF0007B733B /* Espresso */ = {
 			isa = PBXGroup;
 			children = (
-				EA08CFD3193E9FF0007B733B /* BOAppDelegate.h */,
-				EA08CFD4193E9FF0007B733B /* BOAppDelegate.m */,
 				EA08CFD9193E9FF0007B733B /* Images.xcassets */,
-				EA08CFD6193E9FF0007B733B /* Espresso.xcdatamodeld */,
 				EA08CFCB193E9FF0007B733B /* Supporting Files */,
-				36698F0E1A841010A57BD285 /* BOAPIClient.h */,
-				36698C1D04E6362E715BF3BA /* BOAPIClient.m */,
-				3669800A249C820D48127D0B /* BOCDImportOperation.h */,
-				36698CC13E83CE5841875989 /* BOCDImportOperation.m */,
-				366980BBB94B2EE34C9C67FE /* BOVenueTableViewCell.h */,
-				36698D0072CB30718EC99F5E /* BOVenueTableViewCell.m */,
-				366983092ACF9F9EFE823E9A /* BOVenueTableViewCell+ConfigureCell.h */,
-				36698342622FD36E33B9BBCC /* BOVenueTableViewCell+ConfigureCell.m */,
-				3669891B6A1DC545E9E6A210 /* Venue.h */,
-				366987A5296887CEE9B22849 /* Venue.m */,
-				36698B26276190E1B94D20A9 /* ServerInputProcessing */,
-				366988BB25F396752FB2DD7D /* UtilityMethods */,
-				36698AECB11D18C929FB9D29 /* VenueImportOperation.h */,
-				36698823BEE92EEF9262F0E0 /* VenueImportOperation.m */,
-				366989A8242A284122FFEE5D /* BOVenueTableViewController.m */,
-				36698D7B1BC882E5A28B77FE /* BOVenueTableViewController.h */,
+				36698EFBD9AE794639D8EC35 /* Application */,
+				36698D9FF3F460F6CBC7987A /* Modules */,
 			);
 			name = Espresso;
 			path = OriginApp;
@@ -407,26 +506,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA08CFD1193E9FF0007B733B /* main.m in Sources */,
-				EA08CFD8193E9FF0007B733B /* Espresso.xcdatamodeld in Sources */,
-				EA08CFD5193E9FF0007B733B /* BOAppDelegate.m in Sources */,
-				366980DC01495DD2E7ADDB50 /* BOAPIClient.m in Sources */,
-				3669848613EFF4DD947353EF /* BOCDImportOperation.m in Sources */,
-				3669811D0B85BCE9CFA4EF0C /* BOVenueTableViewCell.m in Sources */,
-				3669851782F13E5665158A84 /* BOVenueTableViewCell+ConfigureCell.m in Sources */,
-				36698A0B890FDFD887388D17 /* Venue.m in Sources */,
-				36698DE79B8FBE92EBBB0F5C /* BOStore.m in Sources */,
-				3669884C267B5DD4D83B27D1 /* BOManagedObject.m in Sources */,
-				3669884DED9FDB1FC60DC855 /* BOBaseManagedObject.m in Sources */,
-				3669868C1FEB28CEA92E2CB8 /* BOSimpleManagedObject.m in Sources */,
-				366986DF71F6E406EFAD2ED7 /* FRCDataSource.m in Sources */,
-				36698C2D088F9B3D1DF6F593 /* FRCViewController.m in Sources */,
-				36698B726AB14AE752D1ED08 /* BOUtilityMethods.m in Sources */,
-				3669887279CE6B835EC99D73 /* NSString+Extensions.m in Sources */,
-				36698A0BC65C74696F7E1108 /* NSDictionary+Extensions.m in Sources */,
-				36698720BA7489E2BD021ADB /* NSFetchedResultsController+LoggedFetch.m in Sources */,
-				36698518CDACAF7961D6EDB0 /* VenueImportOperation.m in Sources */,
-				366986B14B6D487855F553F6 /* BOVenueTableViewController.m in Sources */,
-				36698F589ED8D396AA834A29 /* UILabel+(QuickCreate).m in Sources */,
+				3669858A5CC8FB6AA8A8EBAA /* BOAppDelegate.m in Sources */,
+				36698FA5E54B57A1D29FB00A /* NSFetchedResultsController+LoggedFetch.m in Sources */,
+				36698FB37FADC7F3ADAAC3D1 /* NSDictionary+SafeAccess.m in Sources */,
+				366989C5C94798EE3CC4AC73 /* NSString+Decoding.m in Sources */,
+				36698B29C1FBDF8ACC294B3B /* UILabel+(QuickCreate).m in Sources */,
+				36698F8DB377CB6FEB05C491 /* BOUtilityMethods.m in Sources */,
+				366985D7DB82F9470C5A9CB3 /* BOAPIClient.m in Sources */,
+				36698910E66683793B9910CF /* BOStore.m in Sources */,
+				36698A8B31316B3636FF197B /* FRCViewController.m in Sources */,
+				366987F1969CEF889BE1FD18 /* BOCDImportOperation.m in Sources */,
+				366980A9961695017AF3FB21 /* FRCDataSource.m in Sources */,
+				3669813419BB5A4BCC56F429 /* BOManagedObject.m in Sources */,
+				36698BE006869D6DB73CDE2D /* BOStringIDManagedObject.m in Sources */,
+				366988EAA9FCA4E299A1C505 /* BOVenueTableViewCell.m in Sources */,
+				36698F38F18C1994FB7E15ED /* BOVenueTableViewCell+ConfigureCell.m in Sources */,
+				36698489B5A4C1A1FC592916 /* BOVenueTableViewController.m in Sources */,
+				36698303262332FF851FD3F9 /* Venue.m in Sources */,
+				36698931CF8B7662ECC58863 /* VenueImportOperation.m in Sources */,
+				36698787EBCEC3C0B0136BBE /* Espresso.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +647,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OriginApp/Espresso-Prefix.pch";
 				INFOPLIST_FILE = "OriginApp/Espresso-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Espresso;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -565,6 +664,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OriginApp/Espresso-Prefix.pch";
 				INFOPLIST_FILE = "OriginApp/Espresso-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = Espresso;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
@@ -643,19 +743,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EA08CFD6193E9FF0007B733B /* Espresso.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EA08CFD7193E9FF0007B733B /* Espresso.xcdatamodel */,
-			);
-			currentVersion = EA08CFD7193E9FF0007B733B /* Espresso.xcdatamodel */;
-			path = Espresso.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EA08CFB7193E9FF0007B733B /* Project object */;
 }

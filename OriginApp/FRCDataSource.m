@@ -26,11 +26,6 @@
         self.tableView.dataSource = self;
         self.reuseIdentifier = aCellIdentifier;
         self.configureCellBlock = aConfigureCellBlock;
-
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                 selector:@selector(reloadTableData:)
-//                                                     name:kGalleryImportDidFinishNotification object:nil];
-
         [self setup];
     }
     return self;
@@ -75,10 +70,6 @@
     [self.fetchedResultsController executeLoggedFetchRequest];
 
     [self reloadData];
-
-
-//    [self.tableView reloadData];
-//    [self.tableView setContentOffset:CGPointMake(0.0f, -self.tableView.contentInset.top) animated:YES];
 }
 
 - (id <NSFetchedResultsSectionInfo>) getInfoForSection:(NSInteger)section
@@ -147,15 +138,6 @@
     id object = [self objectAtIndexPath:indexPath];
 
     self.configureCellBlock(cell, object);
-
-//    if (indexPath.row == [[self.fetchedResultsController ] objectAtIndex:indexPath.section] count] - 1)
-//    {
-//        ((CollectionFilterTableViewCell *) cell).cellBottomSeparatorView.hidden = YES;
-//    }
-//    else
-//    {
-//        ((CollectionFilterTableViewCell *) cell).cellBottomSeparatorView.hidden = NO;
-//    }
 
     return cell;
 }

@@ -4,9 +4,9 @@
 //
 
 #import "BOManagedObject.h"
-#import "NSDictionary+Extensions.h"
-#import "BOBaseManagedObject.h"
-#import "NSString+Extensions.h"
+#import "NSDictionary+SafeAccess.h"
+#import "BOStringIDManagedObject.h"
+#import "NSString+Decoding.h"
 
 @implementation BOManagedObject
 
@@ -700,7 +700,7 @@
         return;
     }
 
-    BOBaseManagedObject *theObject = [[BOManagedObject fetchEntitiesWithName:relationshipEntityName
+    BOStringIDManagedObject *theObject = [[BOManagedObject fetchEntitiesWithName:relationshipEntityName
                                                                    inContext:self.managedObjectContext
                                                          withSortDescriptors:nil
                                                                withPredicate:[NSPredicate predicateWithFormat:@"id = %@", entityID]]

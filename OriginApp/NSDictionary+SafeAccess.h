@@ -1,6 +1,6 @@
 
 
-@interface NSDictionary (Extensions)
+@interface NSDictionary (SafeAccess)
 
 - (id)safeNullValueForKey:(NSString *)key;
 

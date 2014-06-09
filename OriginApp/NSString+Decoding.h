@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Extensions)
+@interface NSString (Decoding)
 
 - (BOOL)isNotBlank;
 - (NSString *) decodeHtml;

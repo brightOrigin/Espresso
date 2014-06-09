@@ -2,6 +2,9 @@
 // Created by Tony on 10/21/13.
 //
 
+/**
+* NSOperation subclass that provides background processing of updates from server.
+*/
 
 @interface BOCDImportOperation : NSOperation
 
